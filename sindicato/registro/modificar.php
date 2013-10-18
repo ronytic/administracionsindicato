@@ -1,11 +1,11 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Modificar Servicio";
+$titulo="Modificar Sindicato";
 $id=$_GET['id'];
-include_once '../../class/servicio.php';
-$servicio=new servicio;
-$ser=array_shift($servicio->mostrar($id));
+include_once '../../class/sindicato.php';
+$sindicato=new sindicato;
+$sin=array_shift($sindicato->mostrar($id));
 /*include_once("../../class/proveedor.php");
 $proveedor=new proveedor;
 $prov=todolista($proveedor->mostrarTodo(),"codproveedor","nombre","");*/
@@ -23,15 +23,24 @@ include_once '../../cabecerahtml.php';
                 <?php campos("","id","hidden",$id);?>
 				<table class="tablareg">
 					<tr>
-						<td><?php campos("Nombre","nombre","text",$ser['nombre'],1,array("required"=>"required"));?></td>
+						<td><?php campos("Nombre","nombre","text",$sin['nombre'],1,array("required"=>"required"));?></td>
 					</tr>
 					<tr>
-						<td><?php campos("Descripción","descripcion","text",$ser['descripcion']);?></td>
+						<td><?php campos("Personería Jurídica","personeriajuridica","text",$sin['personeriajuridica']);?></td>
 					</tr>
                     <tr>
-						<td><?php campos("Observación","observacion","textarea",$ser['observacion']);?></td>
+						<td><?php campos("Nombre del Responsable","nombreresponsable","text",$sin['nombreresponsable']);?></td>
 					</tr>
-					<tr><td><?php campos("Modificar","guardar","submit");?></td></tr>
+                    <tr>
+						<td><?php campos("Teléfono","telefono","text",$sin['telefono']);?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Dirección","direccion","text",$sin['direccion']);?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Observación","observacion","textarea",$sin['observacion']);?></td>
+					</tr>
+					<tr><td><?php campos("Guardar","guardar","submit");?></td></tr>
 				</table>
                 </form>
 			</fieldset>

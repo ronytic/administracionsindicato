@@ -1,14 +1,14 @@
 <?php
 include_once("../../impresion/pdf.php");
-$titulo="Reporte de Servicio";
+$titulo="Reporte de Sindicato";
 $id=$_GET['id'];
 class PDF extends PPDF{
 	
 }
 
-include_once("../../class/servicio.php");
-$servicio=new servicio;
-$ser=array_shift($servicio->mostrar($id));
+include_once("../../class/sindicato.php");
+$sindicato=new sindicato;
+$sin=array_shift($sindicato->mostrar($id));
 
 include_once("../../class/proveedor.php");
 $proveedor=new proveedor;
@@ -17,9 +17,12 @@ $prov=array_shift($proveedor->mostrar($pro['codproveedor']));
 $pdf=new PDF("P","mm","letter");
 
 $pdf->AddPage();
-mostrarI(array("Nombre"=>$ser['nombre'],
-				"Descripcion"=>$ser['descripcion'],
-				"Observación"=>$ser['observacion'],
+mostrarI(array("Nombre"=>$sin['nombre'],
+				"Personería Jurídica"=>$sin['personeriajuridica'],
+				"Nombre del Responsable"=>$sin['nombreresponsable'],
+				"Teléfono"=>$sin['telefono'],
+				"Dirección"=>$sin['direccion'],
+				"Observación"=>$sin['observacion'],
 			));
 
 /*$foto="../foto/".$emp['foto'];

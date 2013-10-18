@@ -1,7 +1,7 @@
 <?php
 include_once '../../login/check.php';
 $folder="../../";
-$titulo="Registro de Servicio";
+$titulo="Registro de Sindicato";
 include_once("../../class/proveedor.php");
 $proveedor=new proveedor;
 $prov=todolista($proveedor->mostrarTodo(),"codproveedor","nombre","");
@@ -20,7 +20,16 @@ include_once '../../cabecerahtml.php';
 						<td><?php campos("Nombre","nombre","text","",1,array("required"=>"required"));?></td>
 					</tr>
 					<tr>
-						<td><?php campos("Descripción","descripcion","text");?></td>
+						<td><?php campos("Personería Jurídica","personeriajuridica","text");?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Nombre del Responsable","nombreresponsable","text");?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Teléfono","telefono","text");?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Dirección","direccion","text");?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Observación","observacion","textarea");?></td>

@@ -1,8 +1,8 @@
 <?php
 include_once("../../login/check.php");
 if(!empty($_POST)):
-include_once("../../class/servicio.php");
-$servicio=new servicio;
+include_once("../../class/sindicato.php");
+$sindicato=new sindicato;
 
 extract($_POST);
 //empieza la copia de archivos
@@ -16,11 +16,14 @@ if(($_FILES['curriculum']['type']=="application/pdf" || $_FILES['curriculum']['t
 }
 */
 $valores=array(	"nombre"=>"'$nombre'",
-				"descripcion"=>"'$descripcion'",
+				"personeriajuridica"=>"'$personeriajuridica'",
+				"nombreresponsable"=>"'$nombreresponsable'",
+				"telefono"=>"'$telefono'",
+				"direccion"=>"'$direccion'",
 				"observacion"=>"'$observacion'",
 				
 				);
-				$servicio->insertar($valores);
+				$sindicato->insertar($valores);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
 
 

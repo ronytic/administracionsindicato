@@ -1,15 +1,15 @@
 <?php
 include_once("../../login/check.php");
 if(!empty($_POST)):
-include_once("../../class/modalidad.php");
-$modalidad=new modalidad;
+include_once("../../class/servicio.php");
+$servicio=new servicio;
 extract($_POST);
 //empieza la copia de archivos
 $valores=array(	"nombre"=>"'$nombre'",
 				"descripcion"=>"'$descripcion'",
 				"observacion"=>"'$observacion'",
 				);
-				$modalidad->actualizar($valores,$id);
+				$servicio->actualizar($valores,$id);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
 
 

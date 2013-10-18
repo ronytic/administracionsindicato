@@ -2,12 +2,12 @@
 include_once '../../login/check.php';
 if (!empty($_POST)) {
 	$folder="../../";
-	include_once '../../class/modalidad.php';
+	include_once '../../class/servicio.php';
 	extract($_POST);
 
-	$modalidad=new modalidad;
-	$mod=$modalidad->mostrarTodo("nombre LIKE '%$nombre%'");
+	$servicio=new servicio;
+	$ser=$servicio->mostrarTodo("nombre LIKE '%$nombre%'");
 	$titulo=array("nombre"=>"Nombre","descripcion"=>"Descripción","observacion"=>"Observación");
-	listadoTabla($titulo,$mod,1,"modificar.php","eliminar.php","ver.php");
+	listadoTabla($titulo,$ser,1,"modificar.php","eliminar.php","ver.php");
 }
 ?>

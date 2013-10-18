@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Listado de Productos";
+$titulo="Listado de Servicios";
 $folder="../../";
 include_once("../../class/proveedor.php");
 $proveedor=new proveedor;

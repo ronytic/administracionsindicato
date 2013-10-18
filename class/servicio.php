@@ -1,6 +1,6 @@
 <?php
 include_once("bd.php");
-class distribuidor extends bd{
+class servicio extends bd{
 
 }
 ?>

@@ -1,18 +1,22 @@
 <?php
 include_once("../../login/check.php");
 if(!empty($_POST)):
-include_once("../../class/sindicato.php");
-$sindicato=new sindicato;
+include_once("../../class/linea.php");
+$linea=new linea;
 extract($_POST);
 //empieza la copia de archivos
-$valores=array(	"nombre"=>"'$nombre'",
-				"personeriajuridica"=>"'$personeriajuridica'",
-				"nombreresponsable"=>"'$nombreresponsable'",
-				"telefono"=>"'$telefono'",
-				"direccion"=>"'$direccion'",
+$valores=array(	"numerolinea"=>"'$numerolinea'",
+				"color"=>"'$color'",
+				"codsindicato"=>"'$codsindicato'",
+				"paradainicial"=>"'$paradainicial'",
+				"paradafinal"=>"'$paradafinal'",
+				"trayectoida"=>"'$trayectoida'",
+				"trayectovuelta"=>"'$trayectovuelta'",
+				"codmodalidad"=>"'$codmodalidad'",
+				"codservicio"=>"'$codservicio'",
 				"observacion"=>"'$observacion'",
 				);
-				$sindicato->actualizar($valores,$id);
+				$linea->actualizar($valores,$id);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
 
 

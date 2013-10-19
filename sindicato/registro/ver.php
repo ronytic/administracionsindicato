@@ -10,10 +10,6 @@ include_once("../../class/sindicato.php");
 $sindicato=new sindicato;
 $sin=array_shift($sindicato->mostrar($id));
 
-include_once("../../class/proveedor.php");
-$proveedor=new proveedor;
-$prov=array_shift($proveedor->mostrar($pro['codproveedor']));
-
 $pdf=new PDF("P","mm","letter");
 
 $pdf->AddPage();

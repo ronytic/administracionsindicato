@@ -10,9 +10,6 @@ include_once("../../class/modalidad.php");
 $modalidad=new modalidad;
 $mod=array_shift($modalidad->mostrar($id));
 
-include_once("../../class/proveedor.php");
-$proveedor=new proveedor;
-$prov=array_shift($proveedor->mostrar($pro['codproveedor']));
 
 $pdf=new PDF("P","mm","letter");
 

@@ -10,9 +10,6 @@ include_once("../../class/servicio.php");
 $servicio=new servicio;
 $ser=array_shift($servicio->mostrar($id));
 
-include_once("../../class/proveedor.php");
-$proveedor=new proveedor;
-$prov=array_shift($proveedor->mostrar($pro['codproveedor']));
 
 $pdf=new PDF("P","mm","letter");
 

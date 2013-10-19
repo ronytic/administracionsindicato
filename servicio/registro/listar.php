@@ -2,9 +2,7 @@
 include_once("../../login/check.php");
 $titulo="Listado de Servicios";
 $folder="../../";
-include_once("../../class/proveedor.php");
-$proveedor=new proveedor;
-$prov=todolista($proveedor->mostrarTodo(),"codproveedor","nombre","");
+
 
 $dest=array("Procesado"=>"Procesado","Directo"=>"Directo");
 include_once("../../funciones/funciones.php");

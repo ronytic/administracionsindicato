@@ -1,30 +1,44 @@
 <?php
 include_once("../../impresion/pdf.php");
-$titulo="Reporte de Sindicato";
+$titulo="Reporte de Registro de Linea";
 $id=$_GET['id'];
 class PDF extends PPDF{
 	
 }
 
-include_once("../../class/sindicato.php");
-$sindicato=new sindicato;
-$sin=array_shift($sindicato->mostrar($id));
+include_once("../../class/linea.php");
+$linea=new linea;
+$lin=array_shift($linea->mostrar($id));
 
-include_once("../../class/proveedor.php");
-$proveedor=new proveedor;
-$prov=array_shift($proveedor->mostrar($pro['codproveedor']));
+include_once '../../class/sindicato.php';
+include_once '../../class/servicio.php';
+include_once '../../class/modalidad.php';
+$modalidad=new modalidad;
+$servicio=new servicio;
+$sindicato=new sindicato;
+	
+$mod=array_shift($modalidad->mostrar($lin['codmodalidad']));
+$sin=array_shift($sindicato->mostrar($lin['codsindicato']));
+$ser=array_shift($servicio->mostrar($lin['codservicio']));
 
 $pdf=new PDF("P","mm","letter");
 
 $pdf->AddPage();
-mostrarI(array("Nombre"=>$sin['nombre'],
-				"Personería Jurídica"=>$sin['personeriajuridica'],
-				"Nombre del Responsable"=>$sin['nombreresponsable'],
-				"Teléfono"=>$sin['telefono'],
-				"Dirección"=>$sin['direccion'],
-				"Observación"=>$sin['observacion'],
+mostrarI(array("Número de Linea"=>$lin['numerolinea'],
+				"Color"=>$lin['color'],
+				"Sindicato"=>$sin['nombre'],
+				"Parada Inicial"=>$lin['paradainicial'],
+				"Trayecto de Ida"=>""
 			));
+$pdf->CuadroCuerpoMulti(160,$lin['trayectoida']);
 
+mostrarI(array("Parada Final"=>$lin['paradafinal'],
+				"Trayecto de Vuelta"=>""));
+$pdf->CuadroCuerpoMulti(160,$lin['trayectovuelta']);
+mostrarI(array(
+				"Modalidad"=>$mod['nombre'],
+				"Servicio"=>$ser['nombre'],
+				"Observación"=>$sin['observacion']));
 /*$foto="../foto/".$emp['foto'];
 if(!empty($emp['foto']) && file_exists($foto)){
 	$pdf->Image($foto,140,50,40,40);	

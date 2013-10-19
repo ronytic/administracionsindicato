@@ -1,8 +1,8 @@
 <?php
 include_once("../../login/check.php");
 if(!empty($_POST)):
-include_once("../../class/sindicato.php");
-$sindicato=new sindicato;
+include_once("../../class/linea.php");
+$linea=new linea;
 
 extract($_POST);
 //empieza la copia de archivos
@@ -15,15 +15,18 @@ if(($_FILES['curriculum']['type']=="application/pdf" || $_FILES['curriculum']['t
 	$mensaje[]="Archivo no válido del curriculum. Verifique e intente nuevamente";
 }
 */
-$valores=array(	"nombre"=>"'$nombre'",
-				"personeriajuridica"=>"'$personeriajuridica'",
-				"nombreresponsable"=>"'$nombreresponsable'",
-				"telefono"=>"'$telefono'",
-				"direccion"=>"'$direccion'",
+$valores=array(	"numerolinea"=>"'$numerolinea'",
+				"color"=>"'$color'",
+				"codsindicato"=>"'$codsindicato'",
+				"paradainicial"=>"'$paradainicial'",
+				"paradafinal"=>"'$paradafinal'",
+				"trayectoida"=>"'$trayectoida'",
+				"trayectovuelta"=>"'$trayectovuelta'",
+				"codmodalidad"=>"'$codmodalidad'",
+				"codservicio"=>"'$codservicio'",
 				"observacion"=>"'$observacion'",
-				
 				);
-				$sindicato->insertar($valores);
+				$linea->insertar($valores);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
 
 

@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Estadísticas de Lineas por Modalidades";
+$titulo="Estadísticas de Líneas por Modalidades";
 extract($_POST);
 
 $codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';

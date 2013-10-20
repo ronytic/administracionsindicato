@@ -157,9 +157,9 @@ class bd{
 		$orden=$orden?$orden:"cod".$this->tabla;
 		$condicion=$where?$where.'':'';
 		if($cantidad==0)
-			return $this->getRecords($condicion."",$orden,0,0,0,0);
+			return $this->getRecords($condicion."activo=1",$orden,0,0,0,0);
 		else
-			return $this->getRecords($condicion."",$orden,0,$cantidad,0,0);
+			return $this->getRecords($condicion."activo=1",$orden,0,$cantidad,0,0);
 	}
 	function mostrarTodoUnion($tablas='',$campos='*',$orden="",$where='',$activo='',$cantidad=0){
 //		echo "asd".$orden;

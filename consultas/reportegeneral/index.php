@@ -1,12 +1,20 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Reporte de General de Estado de Productos en Inventario";
+$titulo="Reporte General de Lineas de Sindicato";
 $folder="../../";
 include_once("../../funciones/funciones.php");
 
-include_once("../../class/productos.php");
-$productos=new productos;
-$prod=todolista($productos->mostrarTodos("","nombre"),"codproductos","nombre","");
+include_once("../../class/sindicato.php");
+$sindicato=new sindicato;
+$sin=todolista($sindicato->mostrarTodo("","nombre"),"codsindicato","nombre","");
+
+include_once("../../class/modalidad.php");
+$modalidad=new modalidad;
+$mod=todolista($modalidad->mostrarTodo("","nombre"),"codmodalidad","nombre","");
+
+include_once("../../class/servicio.php");
+$servicio=new servicio;
+$ser=todolista($servicio->mostrarTodo("","nombre"),"codservicio","nombre","");
 
 include_once "../../cabecerahtml.php";
 ?>
@@ -19,10 +27,10 @@ include_once "../../cabecerahtml.php";
             <form id="busqueda" action="busqueda.php" method="post">
                 <table class="tablabus">
                     <tr>
-                        <td colspan="4"><?php campos("Producto","codproductos","select",$prod,0)?></td>
-                        <?php /*<td><?php campos("Fecha de Inicio","fechainicio","date","")?></td>
-                        <td><?php campos("Fecha Fin","fechafin","date","")?></td>
-                        <td><?php campos("Producto Existente","existente","select",array("0"=>"No","1"=>"Si"))?></td>*/?>
+                        <td><?php campos("Sindicato","codsindicato","select",$sin);?></td>
+                        <td><?php campos("Modalidad","codmodalidad","select",$mod);?></td>
+                        <td><?php campos("Servicio","codservicio","select",$ser);?></td>
+                        
                     </tr>
                     <tr>
                         <td><?php campos("Ver Reporte","enviar","submit","",0,array("size"=>15));?></td>
@@ -32,6 +40,7 @@ include_once "../../cabecerahtml.php";
             </fieldset>
         </div>
         <div class="clear"></div>
+        <strong>Nota:</strong> Reporte Tamaño Oficio
         <div id="respuesta"></div>
     </div>
 </div>

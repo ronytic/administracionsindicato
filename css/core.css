@@ -470,6 +470,9 @@ table.tablareg td input,table.tablareg td select,table.tablareg td option,table.
 	/*display: block;*/
 }
 /*Tabla de Busqueda*/
+table.tablabus td{
+	padding:5px;	
+}
 table.tablabus td.der{
 	text-align:right;
 }

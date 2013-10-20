@@ -25,7 +25,7 @@ $modalidad=new modalidad;
 $servicio=new servicio;
 $sindicato=new sindicato;
 
-$where="$codsindicato$codmodalidad$codservicio";
+$where="$codsindicato $codmodalidad $codservicio";
 /*if(!empty($fechacontrato)){
 	$where="`fechacontrato`<='$fechacontrato'";
 }
@@ -36,7 +36,6 @@ if(!empty($tipocontrato)){
 	$where=(empty($where))?$where."`tipocontrato` LIKE '%$tipocontrato%'":$where." and `tipocontrato` LIKE '%$tipocontrato%'";
 }*/
 
-//echo "-".$where."-";
 class PDF extends PPDF{
 	function Cabecera(){
 		global $fechasalida;
@@ -50,8 +49,6 @@ class PDF extends PPDF{
 		$this->TituloCabecera(40,"Servicio");
 		$this->TituloCabecera(40,"Número de Linea");
 		$this->TituloCabecera(40,"Color");
-		$this->TituloCabecera(50,"Parada Inicial");
-		$this->TituloCabecera(50,"Parada Final");
 	}	
 }
 $pdf=new PDF("L","mm","legal");
@@ -69,8 +66,6 @@ foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
 	$pdf->CuadroCuerpo(40,$ser['nombre']);
 	$pdf->CuadroCuerpo(40,$l['numerolinea']);
 	$pdf->CuadroCuerpo(40,$l['color']);
-	$pdf->CuadroCuerpo(50,$l['paradainicial']);
-	$pdf->CuadroCuerpo(50,$l['paradafinal']);
 	
 	$pdf->ln();
 }

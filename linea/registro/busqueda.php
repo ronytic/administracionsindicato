@@ -32,6 +32,6 @@ if (!empty($_POST)) {
 		$datos[$i]['codservicio']=$ser['nombre'];
 	}
 	$titulo=array("numerolinea"=>"Número de Linea","color"=>"Color","paradainicial"=>"Parada Inicial","paradafinal"=>"Parada Final","codmodalidad"=>"Modalidad","codsindicato"=>"Sindicato","codservicio"=>"Servicio");
-	listadoTabla($titulo,$datos,1,"modificar.php","eliminar.php","ver.php");
+	listadoTabla($titulo,$datos,1,"modificar.php","eliminar.php","ver.php",array("Ver Datos General"=>"reportegeneral.php"),"","_blank");
 }
 ?>

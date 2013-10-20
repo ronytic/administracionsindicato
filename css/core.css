@@ -333,6 +333,24 @@ a.enlaceusuario{
 a:hover,.enlace:hover{
 	text-decoration:underline;	
 }
+a.botonadicional{
+	
+	display: block;
+
+	
+	padding: 3px 5px 5px 3px;
+	text-align: center;
+	vertical-align: middle;
+	background-color:#FFF;
+	color: #575557;
+	
+	text-decoration: none;
+	display: inline-block;
+}
+a.botonadicional:hover{
+	box-shadow: #999 1px 1px 1px;
+
+}
 a.boton{
 	background-color:#FFF;
 	padding: 3px;
@@ -341,7 +359,7 @@ a.boton{
 	box-shadow:#999 0px 0px 5px;
 	-moz-border-radius: 5px; -webkit-border-radius: 5px; -msie-border-radius: 5px;
 	text-decoration: none;
-	color: #575557;
+	color: #8C8A8C;
 }
 a.boton:hover{
 	background-color:#FFF;

@@ -358,7 +358,11 @@ function mostrarI($datos){
 	}
 }
 function porcentaje($total,$cantidad){
-	return round(($cantidad*100)/$total,1);
+	if($total==0){
+		return 0;
+	}else{
+		return round(($cantidad*100)/$total,1);
+	}
 }
 function fecha2Str($fecha="",$t=1){
 	$fecha=$fecha==""?date("Y-m-d"):$fecha;

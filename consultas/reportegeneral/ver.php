@@ -5,7 +5,12 @@ $titulo="Reporte General de Lineas de Sindicato";
 extract($_GET);
 
 $codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';
-$codmodalidad=$codmodalidad!=''?" and codmodalidad='$codmodalidad'":'';
+if($codsindicato!=''){
+	$codmodalidad=$codmodalidad!=''?" and codmodalidad='$codmodalidad'":'';
+}else{
+	$codmodalidad=$codmodalidad!=''?" codmodalidad='$codmodalidad'":'';
+}
+
 $codservicio=$codservicio!=''?" and codservicio='$codservicio'":'';
 
 //$codproductos=$codproductos!=""?$codproductos:"%";

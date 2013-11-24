@@ -50,13 +50,18 @@ class PDF extends PPDF{
 		}*/
 		$this->Ln();
 		$this->TituloCabecera(10,"N");
+		$this->TituloCabecera(20,"Núm Linea");
+		$this->TituloCabecera(20,"Color");
 		$this->TituloCabecera(50,"Sindicato");
 		$this->TituloCabecera(40,"Modalidad");
+		$this->TituloCabecera(20,"N Pasajero");
 		$this->TituloCabecera(40,"Servicio");
-		$this->TituloCabecera(40,"Número de Linea");
-		$this->TituloCabecera(40,"Color");
+		
+		
 		$this->TituloCabecera(50,"Parada Inicial");
 		$this->TituloCabecera(50,"Parada Final");
+		$this->TituloCabecera(20,"Long Tramo");
+		
 	}	
 }
 $pdf=new PDF("L","mm","legal");
@@ -66,16 +71,22 @@ foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
 	$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
 	$sin=array_shift($sindicato->mostrar($l['codsindicato']));
 	$ser=array_shift($servicio->mostrar($l['codservicio']));
-
-
+	$pi=str_split($l['paradainicial'],30);
+	$pf=str_split($l['paradafinal'],30);
+	
 	$pdf->CuadroCuerpo(10,$i,0,"R");
+	$pdf->CuadroCuerpo(20,$l['numerolinea'],0,"C");
+	$pdf->CuadroCuerpo(20,$l['color']);
 	$pdf->CuadroCuerpo(50,$sin['nombre']);
 	$pdf->CuadroCuerpo(40,$mod['nombre']);
+	$pdf->CuadroCuerpo(20,$l['numeropasajeros']);
 	$pdf->CuadroCuerpo(40,$ser['nombre']);
-	$pdf->CuadroCuerpo(40,$l['numerolinea']);
-	$pdf->CuadroCuerpo(40,$l['color']);
-	$pdf->CuadroCuerpo(50,$l['paradainicial']);
-	$pdf->CuadroCuerpo(50,$l['paradafinal']);
+	
+	
+	$pdf->CuadroCuerpo(50,$pi[0]);
+	$pdf->CuadroCuerpo(50,$pf[0]);
+	$pdf->CuadroCuerpo(20,$l['longitudtramo']);
+	
 	
 	$pdf->ln();
 }

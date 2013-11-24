@@ -26,6 +26,7 @@ $servicio=new servicio;
 $sindicato=new sindicato;
 
 $where="$codsindicato $codmodalidad $codservicio";
+$where="";
 /*if(!empty($fechacontrato)){
 	$where="`fechacontrato`<='$fechacontrato'";
 }
@@ -44,11 +45,12 @@ class PDF extends PPDF{
 		}*/
 		$this->Ln();
 		$this->TituloCabecera(10,"N");
-		$this->TituloCabecera(50,"Sindicato");
-		$this->TituloCabecera(40,"Modalidad");
-		$this->TituloCabecera(40,"Servicio");
 		$this->TituloCabecera(40,"Número de Linea");
 		$this->TituloCabecera(40,"Color");
+		$this->TituloCabecera(40,"Modalidad");
+		$this->TituloCabecera(40,"Servicio");
+		$this->TituloCabecera(50,"Sindicato");
+		
 	}	
 }
 $pdf=new PDF("L","mm","legal");
@@ -61,11 +63,12 @@ foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
 
 
 	$pdf->CuadroCuerpo(10,$i,0,"R");
-	$pdf->CuadroCuerpo(50,$sin['nombre']);
+	$pdf->CuadroCuerpo(40,$l['numerolinea'],0,"C");
+	$pdf->CuadroCuerpo(40,$l['color']);
 	$pdf->CuadroCuerpo(40,$mod['nombre']);
 	$pdf->CuadroCuerpo(40,$ser['nombre']);
-	$pdf->CuadroCuerpo(40,$l['numerolinea']);
-	$pdf->CuadroCuerpo(40,$l['color']);
+	$pdf->CuadroCuerpo(50,$sin['nombre']);
+	
 	
 	$pdf->ln();
 }

@@ -41,7 +41,7 @@ include_once "../../cabecerahtml.php";
         </div>
         <div class="clear"></div>
         <strong>Nota:</strong> Reporte Tamaño Oficio
-        <div id="respuesta"></div>
+        <div id="respuesta" class="imprimir"></div>
     </div>
 </div>
 <?php include_once "../../piepagina.php";?>

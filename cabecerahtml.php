@@ -32,3 +32,15 @@ $(document).ready(function(e) {
 	$("select").not(".nolista").chosen({width:'100%'});	
 });
 </script>
+<style type="text/css">
+	#respuesta{
+		
+		max-height:400px;
+		overflow:auto;
+	}
+	#respuesta.imprimir{
+		
+		max-height:inherit !important;
+		overflow:auto;
+	}
+</style>

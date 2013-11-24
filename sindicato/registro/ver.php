@@ -1,6 +1,6 @@
 <?php
 include_once("../../impresion/pdf.php");
-$titulo="Reporte de Sindicato";
+$titulo="Reporte de Registro de Sindicato";
 $id=$_GET['id'];
 class PDF extends PPDF{
 	

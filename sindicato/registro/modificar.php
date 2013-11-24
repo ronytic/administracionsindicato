@@ -32,6 +32,9 @@ include_once '../../cabecerahtml.php';
 						<td><?php campos("Nombre del Responsable","nombreresponsable","text",$sin['nombreresponsable']);?></td>
 					</tr>
                     <tr>
+						<td><?php campos("C.I.: del Responsable","ciresponsable","text",$sin['ciresponsable']);?></td>
+					</tr>
+                    <tr>
 						<td><?php campos("Teléfono","telefono","text",$sin['telefono']);?></td>
 					</tr>
                     <tr>

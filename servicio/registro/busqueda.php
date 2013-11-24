@@ -8,6 +8,6 @@ if (!empty($_POST)) {
 	$servicio=new servicio;
 	$ser=$servicio->mostrarTodo("nombre LIKE '%$nombre%'");
 	$titulo=array("nombre"=>"Nombre","descripcion"=>"Descripción","observacion"=>"Observación");
-	listadoTabla($titulo,$ser,1,"modificar.php","eliminar.php","ver.php");
+	listadoTabla($titulo,$ser,1,"modificar.php","eliminar.php","");
 }
 ?>

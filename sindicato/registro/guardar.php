@@ -18,6 +18,7 @@ if(($_FILES['curriculum']['type']=="application/pdf" || $_FILES['curriculum']['t
 $valores=array(	"nombre"=>"'$nombre'",
 				"personeriajuridica"=>"'$personeriajuridica'",
 				"nombreresponsable"=>"'$nombreresponsable'",
+				"ciresponsable"=>"'$ciresponsable'",
 				"telefono"=>"'$telefono'",
 				"direccion"=>"'$direccion'",
 				"observacion"=>"'$observacion'",

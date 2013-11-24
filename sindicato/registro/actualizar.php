@@ -8,6 +8,7 @@ extract($_POST);
 $valores=array(	"nombre"=>"'$nombre'",
 				"personeriajuridica"=>"'$personeriajuridica'",
 				"nombreresponsable"=>"'$nombreresponsable'",
+				"ciresponsable"=>"'$ciresponsable'",
 				"telefono"=>"'$telefono'",
 				"direccion"=>"'$direccion'",
 				"observacion"=>"'$observacion'",

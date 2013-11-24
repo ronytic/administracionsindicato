@@ -23,6 +23,9 @@ include_once '../../cabecerahtml.php';
 						<td><?php campos("Nombre del Responsable","nombreresponsable","text");?></td>
 					</tr>
                     <tr>
+						<td><?php campos("C.I.: del Responsable","ciresponsable","text");?></td>
+					</tr>
+                    <tr>
 						<td><?php campos("Teléfono","telefono","text");?></td>
 					</tr>
                     <tr>

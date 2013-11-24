@@ -17,7 +17,8 @@ php_start(0);
 			global $title,$gestion,$titulo,$logo,$idioma;
 			$fecha=date("d-m-Y");
 			
-			$this->Image(dirname(__FILE__)."/../imagenes/logos/".$logo,10,10,35,20);
+			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo2.jpg",20,10,20,20);
+			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo.jpg",$this->ancho-10,10,35,20);
 			$this->Fuente("",10);
 			$this->SetXY(45,11);
 			$this->Cell(55,4,utf8_decode($title),0,0,"L");

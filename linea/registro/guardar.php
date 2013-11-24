@@ -15,6 +15,8 @@ if(($_FILES['curriculum']['type']=="application/pdf" || $_FILES['curriculum']['t
 	$mensaje[]="Archivo no válido del curriculum. Verifique e intente nuevamente";
 }
 */
+$li=$linea->mostrarTodo("numerolinea='$numerolinea' and color='$color'");
+if(count($li)==0){
 $valores=array(	"numerolinea"=>"'$numerolinea'",
 				"color"=>"'$color'",
 				"codsindicato"=>"'$codsindicato'",
@@ -22,13 +24,18 @@ $valores=array(	"numerolinea"=>"'$numerolinea'",
 				"paradafinal"=>"'$paradafinal'",
 				"trayectoida"=>"'$trayectoida'",
 				"trayectovuelta"=>"'$trayectovuelta'",
+				"longitudtramo"=>"'$longitudtramo'",
+				"numeropasajeros"=>"'$numeropasajeros'",
+				
 				"codmodalidad"=>"'$codmodalidad'",
 				"codservicio"=>"'$codservicio'",
 				"observacion"=>"'$observacion'",
 				);
 				$linea->insertar($valores);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";
-
+}else{
+	$mensaje[]="El número de Linea del Sindicato ya se encuentra Registrado";
+}
 
 
 $titulo="Mensaje de Respuesta";

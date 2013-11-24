@@ -50,6 +50,10 @@ include_once '../../cabecerahtml.php';
                         <td><?php campos("Trayecto de Vuelta","trayectovuelta","textarea",$lin['trayectovuelta'],0,array("rows"=>20,"cols"=>40));?></td>
 					</tr>
                     <tr>
+						<td><?php campos("Longitud de Tramo","longitudtramo","text",$lin['longitudtramo'],0,array("size"=>50));?></td>
+                        <td><?php campos("Número de Pasajeros","numeropasajeros","text",$lin['numeropasajeros'],0,array("size"=>50));?></td>
+					</tr>
+                    <tr>
 						<td><?php campos("Modalidad","codmodalidad","select",$mod,0,"",$lin['codmodalidad']);?></td>
                         <td><?php campos("Servicio","codservicio","select",$ser,0,"",$lin['codservicio']);?></td>
 					</tr>

@@ -42,6 +42,10 @@ include_once '../../cabecerahtml.php';
                         <td><?php campos("Trayecto de Vuelta","trayectovuelta","textarea","",0,array("rows"=>20,"cols"=>40));?></td>
 					</tr>
                     <tr>
+						<td><?php campos("Longitud de Tramo","longitudtramo","text","",0,array("size"=>50));?></td>
+                        <td><?php campos("Número de Pasajeros","numeropasajeros","text","",0,array("size"=>50));?></td>
+					</tr>
+                    <tr>
 						<td><?php campos("Modalidad","codmodalidad","select",$mod);?></td>
                         <td><?php campos("Servicio","codservicio","select",$ser);?></td>
 					</tr>

@@ -16,7 +16,7 @@ if (!empty($_POST)) {
 	$modalidad=new modalidad;
 	$servicio=new servicio;
 	$sindicato=new sindicato;
-	$lin=$linea->mostrarTodo("numerolinea LIKE '%$numerolinea%' $codsindicato $codmodalidad $codservicio and paradainicial LIKE '%$paradainicial%' and paradafinal LIKE '%$paradafinal%' and trayectoida LIKE '%$trayectoida%' and trayectovuelta LIKE '%$trayectovuelta%'");
+	$lin=$linea->mostrarTodo("numerolinea LIKE '%$numerolinea%' $codsindicato $codmodalidad $codservicio and paradainicial LIKE '%$paradainicial%' and paradafinal LIKE '%$paradafinal%' and trayectoida LIKE '%$trayectoida%' and trayectovuelta LIKE '%$trayectovuelta%'","numerolinea");
 	
 	foreach($lin as $l){$i++;
 		$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
@@ -27,11 +27,13 @@ if (!empty($_POST)) {
 		$datos[$i]['paradafinal']=$l['paradafinal'];
 		$datos[$i]['numerolinea']=$l['numerolinea'];
 		$datos[$i]['color']=$l['color'];
+		$datos[$i]['longitudtramo']=$l['longitudtramo'];
+		$datos[$i]['numeropasajeros']=$l['numeropasajeros'];
 		$datos[$i]['codmodalidad']=$mod['nombre'];
 		$datos[$i]['codsindicato']=$sin['nombre'];
 		$datos[$i]['codservicio']=$ser['nombre'];
 	}
-	$titulo=array("numerolinea"=>"Número de Linea","color"=>"Color","paradainicial"=>"Parada Inicial","paradafinal"=>"Parada Final","codmodalidad"=>"Modalidad","codsindicato"=>"Sindicato","codservicio"=>"Servicio");
+	$titulo=array("numerolinea"=>"Número de Linea","color"=>"Color","paradainicial"=>"Parada Inicial","paradafinal"=>"Parada Final","longitudtramo"=>"Longitud Tramo","numeropasajeros"=>"Número de Pasajeros","codmodalidad"=>"Modalidad","codservicio"=>"Servicio","codsindicato"=>"Sindicato");
 	listadoTabla($titulo,$datos,1,"modificar.php","eliminar.php","ver.php",array("Ver Datos General"=>"reportegeneral.php"),"","_blank");
 }
 ?>

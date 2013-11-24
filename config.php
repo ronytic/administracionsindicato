@@ -1,6 +1,6 @@
 <?php
 $title="";
-$siglas="SISCOS";
+$siglas="GOBIERNO AUTÓNOMO MUNICIPAL DE EL ALTO DIRECCIÓN DE TRÁFICO Y VIALIDAD, UNIDAD DE TRÁFICO Y TRANSPORTE";
 $directory="administracionsindicato";//ej:carp/ sin el "/"
 $url="http://localhost/";//ej:http:"localhost/"
 $gestion="";

@@ -4,14 +4,16 @@ include_once("../../impresion/pdf.php");
 $titulo="Reporte General de Lineas de Sindicato";
 extract($_GET);
 
-$codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';
-if($codsindicato!=''){
-	$codmodalidad=$codmodalidad!=''?" and codmodalidad='$codmodalidad'":'';
-}else{
-	$codmodalidad=$codmodalidad!=''?" codmodalidad='$codmodalidad'":'';
-}
+$codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":" codsindicato LIKE '%'";
 
-$codservicio=$codservicio!=''?" and codservicio='$codservicio'":'';
+$codmodalidad=$codmodalidad!=''?" codmodalidad='$codmodalidad'":" codmodalidad LIKE '%'";
+
+$codservicio=$codservicio!=''?" codservicio='$codservicio'":" codservicio LIKE '%'";
+
+$consulta=array();
+array_push($consulta,$codsindicato,$codmodalidad,$codservicio);
+$unido=implode(" and ",$consulta);
+//echo $unido;
 
 //$codproductos=$codproductos!=""?$codproductos:"%";
 
@@ -30,7 +32,7 @@ $modalidad=new modalidad;
 $servicio=new servicio;
 $sindicato=new sindicato;
 
-$where="$codsindicato$codmodalidad$codservicio";
+$where="$unido";
 /*if(!empty($fechacontrato)){
 	$where="`fechacontrato`<='$fechacontrato'";
 }

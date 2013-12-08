@@ -3,10 +3,13 @@ include_once("../../login/check.php");
 $titulo="Estadísticas de Líneas por Modalidades";
 extract($_POST);
 
-$codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';
-//$codmodalidad=$codmodalidad!=''?" and codmodalidad='$codmodalidad'":'';
-$codservicio=$codservicio!=''?" and codservicio='$codservicio'":'';
-$where="$codsindicato$codmodalidad$codservicio";
+$codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":" codsindicato LIKE '%'";
+
+$codservicio=$codservicio!=''?" codservicio='$codservicio'":" and codservicio LIKE '%'";
+$unido=array();
+array_push($unido,$codservicio,$codsindicato);
+$where=implode(" and ",$unido);
+
 
 include_once '../../class/linea.php';
 include_once '../../class/sindicato.php';

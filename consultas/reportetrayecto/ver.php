@@ -54,23 +54,23 @@ foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
 	$ser=array_shift($servicio->mostrar($l['codservicio']));
 
 
-	$pdf->CuadroCuerpo(10,$i,0,"R");
-	$pdf->CuadroCuerpo(50,$sin['nombre']);
-	$pdf->CuadroCuerpo(40,$mod['nombre']);
-	$pdf->CuadroCuerpo(40,$ser['nombre']);
-	$pdf->CuadroCuerpo(40,$l['numerolinea']);
-	$pdf->CuadroCuerpo(40,$l['color']);
-	$pdf->CuadroCuerpo(50,$l['paradainicial']);
-	$pdf->CuadroCuerpo(50,$l['paradafinal']);
+	$pdf->CuadroCuerpo(10,$i,1,"R",1);
+	$pdf->CuadroCuerpo(50,$sin['nombre'],1,"",1);
+	$pdf->CuadroCuerpo(40,$mod['nombre'],1,"",1);
+	$pdf->CuadroCuerpo(40,$ser['nombre'],1,"",1);
+	$pdf->CuadroCuerpo(40,$l['numerolinea'],1,"",1);
+	$pdf->CuadroCuerpo(40,$l['color'],1,"",1);
+	$pdf->CuadroCuerpo(50,$l['paradainicial'],1,"",1);
+	$pdf->CuadroCuerpo(50,$l['paradafinal'],1,"",1);
 	
 	$pdf->ln();
 	$pdf->CuadroCuerpo(10,"",0,"R");
-	$pdf->CuadroCuerpoPersonalizado(50,"Trayecto de Ida:",0,"",0,"B");
-	$pdf->CuadroCuerpoMulti(260,$l['trayectoida'],0,"",0);
+	$pdf->CuadroCuerpoPersonalizado(50,"Trayecto de Ida:",0,"",1,"B");
+	$pdf->CuadroCuerpoMulti(260,$l['trayectoida'],0,"",1);
 	
 	$pdf->CuadroCuerpo(10,"",0,"R");
-	$pdf->CuadroCuerpoPersonalizado(50,"Trayecto de Vuelta:",0,"",0,"B");
-	$pdf->CuadroCuerpoMulti(260,$l['trayectovuelta'],0,"",0);
+	$pdf->CuadroCuerpoPersonalizado(50,"Trayecto de Vuelta:",0,"",1,"B");
+	$pdf->CuadroCuerpoMulti(260,$l['trayectovuelta'],0,"",1);
 	$pdf->ln();
 	$pdf->Linea();
 }

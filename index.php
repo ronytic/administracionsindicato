@@ -21,10 +21,12 @@ $mensa=new mensa;
     <div class="contenido">
     	<div class="theme-light">
     	<div id="slider" class="nivoSlider">
-                <img src="imagenes/inicio/Hydrangeas.jpg"/>
-                <img src="imagenes/inicio/Jellyfish.jpg" />
-                <img src="imagenes/inicio/Koala.jpg" />
-                <img src="imagenes/inicio/Lighthouse.jpg"/>
+                <img src="imagenes/inicio/minibus.jpg"/>
+                <img src="imagenes/inicio/minibus1.jpg" />
+                <img src="imagenes/inicio/radio taxi.jpg" />
+                <img src="imagenes/inicio/taxi.jpg"/>
+                <img src="imagenes/inicio/Taxi1.jpg"/>
+                <img src="imagenes/inicio/trufi.jpg"/>
 		</div>
         </div>
     </div>

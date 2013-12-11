@@ -21,7 +21,11 @@ php_start(0);
 			$this->MultiCell($this->ancho,6,utf8_decode("\nGOBIERNO AUTONOMO MUNICIPAL DE EL ALTO\nDIRECCIÓN DE TRÁFICO Y VIALIDAD\nUNIDAD DE TRÁFICO Y TRANSPORTE\n\n"),1,"C");
 			//$this->Line(10,10,$this->ancho+24,10);
 			$this->Line(18,46,18,$this->h-15);
-			$this->Line($this->w-16,46,$this->w-16,$this->h-15);
+			if($this->CurOrientation=="P"){
+				$this->Line($this->w-16,46,$this->w-16,$this->h-15);
+			}else{
+				$this->Line($this->w-22,46,$this->w-22,$this->h-15);	
+			}
 			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo2.jpg",24,14,20,22);
 			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo.jpg",$this->ancho-20,12,35,22);
 			$this->Fuente("",10);

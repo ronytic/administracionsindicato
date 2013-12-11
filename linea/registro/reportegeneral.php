@@ -47,10 +47,14 @@ if($mod['tiporeporte']=="reporte1" or $mod['tiporeporte']=="reporte3" or $mod['t
 $pdf->Ln(10);
 
 $pdf->CuadroCuerpoPersonalizado(90,"MODALIDAD",1,"C",1,"B");
-$pdf->CuadroCuerpoPersonalizado(90,"SERVICIO",1,"C",1,"B");
+if($mod['tiporeporte']=="reporte1" or $mod['tiporeporte']=="reporte2" or $mod['tiporeporte']=="reporte4"){
+	$pdf->CuadroCuerpoPersonalizado(90,"SERVICIO",1,"C",1,"B");
+}
 $pdf->Ln();
 $pdf->CuadroCuerpoPersonalizado(90,$mod['nombre'],0,"",1,"");
-$pdf->CuadroCuerpoPersonalizado(90,$ser['nombre'],0,"",1,"");
+if($mod['tiporeporte']=="reporte1" or $mod['tiporeporte']=="reporte2" or $mod['tiporeporte']=="reporte4"){
+	$pdf->CuadroCuerpoPersonalizado(90,$ser['nombre'],0,"",1,"");
+}
 $pdf->Ln();
 if($mod['tiporeporte']=="reporte1" or $mod['tiporeporte']=="reporte4"){
 	$pdf->CuadroCuerpoPersonalizado(90,"PARADA INICIAL",1,"C",1,"B");

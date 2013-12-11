@@ -1,7 +1,7 @@
 <?php
 include_once("../../login/check.php");
 include_once("../../impresion/pdf.php");
-$titulo="Reporte General de Lineas de Sindicato";
+$titulo="Reporte General de Sindicatos";
 extract($_GET);
 
 $codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';
@@ -45,34 +45,37 @@ class PDF extends PPDF{
 		}*/
 		$this->Ln();
 		$this->TituloCabecera(10,"N");
-		$this->TituloCabecera(40,"Número de Linea");
-		$this->TituloCabecera(40,"Color");
-		$this->TituloCabecera(40,"Modalidad");
-		$this->TituloCabecera(40,"Servicio");
-		$this->TituloCabecera(50,"Sindicato");
+		$this->TituloCabecera(70,"Nombre de Sindicato");
+		$this->TituloCabecera(25,"Pers Juridica");
+		$this->TituloCabecera(50,"Nombre Responsable");
+		$this->TituloCabecera(20,"C.I.");
+		$this->TituloCabecera(40,"Teléfono");
+		$this->TituloCabecera(60,"Dirección");
+		$this->TituloCabecera(40,"Observación");
 		
 	}	
 }
 $pdf=new PDF("L","mm","legal");
 $pdf->AddPage();
 $totales=array();
-foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
+foreach($sindicato->mostrarTodos($where,"nombre") as $l){$i++;
 	$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
 	$sin=array_shift($sindicato->mostrar($l['codsindicato']));
 	$ser=array_shift($servicio->mostrar($l['codservicio']));
 
 
-	$pdf->CuadroCuerpo(10,$i,0,"R");
-	$pdf->CuadroCuerpo(40,$l['numerolinea'],0,"C");
-	$pdf->CuadroCuerpo(40,$l['color']);
-	$pdf->CuadroCuerpo(40,$mod['nombre']);
-	$pdf->CuadroCuerpo(40,$ser['nombre']);
-	$pdf->CuadroCuerpo(50,$sin['nombre']);
+	$pdf->CuadroCuerpo(10,$i,0,"R",1);
+	$pdf->CuadroCuerpo(70,$l['nombre'],0,"",1);
+	$pdf->CuadroCuerpo(25,$l['personeriajuridica'],0,"",1);
+	$pdf->CuadroCuerpo(50,$l['nombreresponsable'],0,"",1);
+	$pdf->CuadroCuerpo(20,$l['ciresponsable'],0,"",1);
+	$pdf->CuadroCuerpo(40,$l['telefono'],0,"",1);
+	$pdf->CuadroCuerpo(60,$l['direccion'],0,"",1);
+	$pdf->CuadroCuerpo(40,$l['observacion'],0,"",1);
 	
 	
 	$pdf->ln();
 }
-$pdf->Linea();
 
 
 $pdf->Output();

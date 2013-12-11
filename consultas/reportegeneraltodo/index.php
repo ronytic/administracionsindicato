@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Reporte General de Lineas de Sindicato";
+$titulo="Reporte General de Sindicatos";
 $folder="../../";
 include_once("../../funciones/funciones.php");
 

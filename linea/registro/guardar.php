@@ -30,6 +30,10 @@ $valores=array(	"numerolinea"=>"'$numerolinea'",
 				"codmodalidad"=>"'$codmodalidad'",
 				"codservicio"=>"'$codservicio'",
 				"observacion"=>"'$observacion'",
+				"paradaautorizada"=>"'$paradaautorizada'",
+				"paradaautorizadadetallada"=>"'$paradaautorizadadetallada'",
+				"vehiculosautorizados"=>"'$vehiculosautorizados'",
+				"caracteristicasvehiculo"=>"'$caracteristicasvehiculo'",
 				);
 				$linea->insertar($valores);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";

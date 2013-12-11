@@ -17,27 +17,32 @@ php_start(0);
 			global $title,$gestion,$titulo,$logo,$idioma;
 			$fecha=date("d-m-Y");
 			
-			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo2.jpg",20,10,20,20);
-			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo.jpg",$this->ancho-10,10,35,20);
+			$this->Fuente("B",10);
+			$this->MultiCell($this->ancho,6,utf8_decode("\nGOBIERNO AUTONOMO MUNICIPAL DE EL ALTO\nDIRECCIÓN DE TRÁFICO Y VIALIDAD\nUNIDAD DE TRÁFICO Y TRANSPORTE\n\n"),1,"C");
+			//$this->Line(10,10,$this->ancho+24,10);
+			$this->Line(18,46,18,$this->h-15);
+			$this->Line($this->w-16,46,$this->w-16,$this->h-15);
+			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo2.jpg",24,14,20,22);
+			$this->Image(dirname(__FILE__)."/../imagenes/logos/logo.jpg",$this->ancho-20,12,35,22);
 			$this->Fuente("",10);
-			$this->SetXY(45,11);
-			$this->Cell(55,4,utf8_decode($title),0,0,"L");
-			$this->Fuente("B",8);
-			$this->SetXY(45,16);
-			$this->Cell(55,4,utf8_decode($gestion),0,0,"L");
-			$this->ln(10);	
-			$this->Fuente("B",18);
-			$this->Cell($this->ancho,4,utf8_decode($titulo.$this->orientation),0,5,"C");
-			$this->ln(5);
-			$this->CuadroCabecera(40,"Fecha de Reporte: ",20,$fecha);
-			$this->Pagina();
-			$this->ln(5);
+			//$this->SetXY(45,40);
+			//$this->Cell(55,4,utf8_decode("asd"),1,0,"L");
+			//$this->Fuente("B",8);
+			//$this->SetXY(45,16);
+			//$this->Cell(55,4,utf8_decode($gestion),0,0,"L");
+			//$this->ln();	
+			$this->Fuente("B",11);
+			$this->Cell($this->ancho,6,utf8_decode($titulo),1,5,"C");
+			//$this->ln(5);
+			//$this->CuadroCabecera(40,"Fecha de Reporte: ",20,$fecha);
+			
+			$this->ln(0.1);
 			if(in_array("Cabecera",get_class_methods($this))){
 				$this->Cabecera();	
 			}
-			$this->ln();
+			$this->ln(5);
 			
-			$this->Cell($this->ancho,0,"",1,1);
+			//$this->Cell($this->ancho,0,"",1,1);
 			$this->Ln(0.1);
 		}
 		function Pagina(){
@@ -116,6 +121,7 @@ php_start(0);
 			$this->Cell($this->ancho,0,"",1,1);
 			$anio=date("Y");
 			$this->Cell(60,4,utf8_decode('Reporte Generado: ').date('d-m-Y H:i:s'),0,0,"L");
+			
 			$this->Cell($this->ancho-60,4,utf8_decode($lema),0,0,"R");
 			//$this->Cell(60,4,utf8_decode($idioma['ReporteGenerado']).": ".date('d-m-Y H:i:s'),0,0,"R");
 			

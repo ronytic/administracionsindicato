@@ -1,10 +1,10 @@
 <?php  
 include_once("../../login/check.php");
 if (!empty($_GET)) {
-	$nombre="mensaje";
+	$nombre="mensajes";
 	include_once '../../class/'.$nombre.'.php';
-	${$nombre}=new $nombre;
+	$mensa=new mensa;
 	$id=$_GET['id'];
-	${$nombre}->eliminar($id);
+	$mensa->eliminar($id);
 }
 ?>

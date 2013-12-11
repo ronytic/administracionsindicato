@@ -62,7 +62,7 @@ class PDF extends PPDF{
 		
 		$this->TituloCabecera(50,"Parada Inicial");
 		$this->TituloCabecera(50,"Parada Final");
-		$this->TituloCabecera(20,"Long Tramo");
+		$this->TituloCabecera(15,"L. Tramo");
 		
 	}	
 }
@@ -87,7 +87,7 @@ foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
 	
 	$pdf->CuadroCuerpo(50,$pi[0]);
 	$pdf->CuadroCuerpo(50,$pf[0]);
-	$pdf->CuadroCuerpo(20,$l['longitudtramo']);
+	$pdf->CuadroCuerpo(15,$l['longitudtramo']);
 	
 	
 	$pdf->ln();

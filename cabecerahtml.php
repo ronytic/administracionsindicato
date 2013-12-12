@@ -44,3 +44,8 @@ $(document).ready(function(e) {
 		overflow:auto;
 	}
 </style>
+<style type="text/css" media="print">
+.noimprimir{
+		display:none;	
+}
+</style>

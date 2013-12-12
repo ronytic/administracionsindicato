@@ -1,7 +1,7 @@
 </head>
 <body>
-<div class="container_12" > 
-	<div class="grid_12">
+<div class="container_12 " > 
+	<div class="grid_12 noimprimir">
     	<div class="banner">
 		<img src="<?php echo $folder;?>imagenes/cabecera2.jpg" alt="" width="100%" height="200">
         </div>

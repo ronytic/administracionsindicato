@@ -3,7 +3,7 @@
 	<div class="grid_12"> 
 		<div id="piepag">
             <div class="mensaje">
-               <?php echo $siglas?> <HR>Todos los Derechos reservados <?php echo date("Y")?> 
+               <?php echo $siglas?> <div class="noimprimir"><HR>Todos los Derechos reservados <?php echo date("Y")?> </div>
             </div>
 		</div> 
 	</div>

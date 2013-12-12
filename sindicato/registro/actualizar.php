@@ -12,6 +12,8 @@ $valores=array(	"nombre"=>"'$nombre'",
 				"telefono"=>"'$telefono'",
 				"direccion"=>"'$direccion'",
 				"observacion"=>"'$observacion'",
+				"fechamodificacion"=>"'".date("Y-m-d")."'",
+				"horamodificacion"=>"'".date("H:i:s")."'",
 				);
 				$sindicato->actualizar($valores,$id);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";

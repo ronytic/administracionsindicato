@@ -39,7 +39,7 @@ class PDF extends PPDF{
 		$this->TituloCabecera(40,"Modalidad");
 		$this->TituloCabecera(40,"Servicio");
 		$this->TituloCabecera(40,"Número de Linea");
-		$this->TituloCabecera(40,"Color");
+		$this->TituloCabecera(30,"Color");
 		$this->TituloCabecera(50,"Parada Inicial");
 		$this->TituloCabecera(50,"Parada Final");
 		
@@ -59,18 +59,18 @@ foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
 	$pdf->CuadroCuerpo(40,$mod['nombre'],1,"",1);
 	$pdf->CuadroCuerpo(40,$ser['nombre'],1,"",1);
 	$pdf->CuadroCuerpo(40,$l['numerolinea'],1,"",1);
-	$pdf->CuadroCuerpo(40,$l['color'],1,"",1);
+	$pdf->CuadroCuerpo(30,$l['color'],1,"",1);
 	$pdf->CuadroCuerpo(50,$l['paradainicial'],1,"",1);
 	$pdf->CuadroCuerpo(50,$l['paradafinal'],1,"",1);
 	
 	$pdf->ln();
 	$pdf->CuadroCuerpo(10,"",0,"R");
 	$pdf->CuadroCuerpoPersonalizado(50,"Trayecto de Ida:",0,"",1,"B");
-	$pdf->CuadroCuerpoMulti(260,$l['trayectoida'],0,"",1);
+	$pdf->CuadroCuerpoMulti(250,$l['trayectoida'],0,"",1);
 	
 	$pdf->CuadroCuerpo(10,"",0,"R");
 	$pdf->CuadroCuerpoPersonalizado(50,"Trayecto de Vuelta:",0,"",1,"B");
-	$pdf->CuadroCuerpoMulti(260,$l['trayectovuelta'],0,"",1);
+	$pdf->CuadroCuerpoMulti(250,$l['trayectovuelta'],0,"",1);
 	$pdf->ln();
 	$pdf->Linea();
 }

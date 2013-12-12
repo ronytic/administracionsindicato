@@ -21,6 +21,8 @@ $valores=array(	"numerolinea"=>"'$numerolinea'",
 				"paradaautorizadadetallada"=>"'$paradaautorizadadetallada'",
 				"vehiculosautorizados"=>"'$vehiculosautorizados'",
 				"caracteristicasvehiculo"=>"'$caracteristicasvehiculo'",
+				"fechamodificacion"=>"'".date("Y-m-d")."'",
+				"horamodificacion"=>"'".date("H:i:s")."'",
 				);
 				$linea->actualizar($valores,$id);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";

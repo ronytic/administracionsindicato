@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Estadísticas de Cantidad de Líneas";
+$titulo="Estadísticas por Sindicato";
 extract($_POST);
 
 $codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';

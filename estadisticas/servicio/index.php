@@ -23,7 +23,7 @@ include_once "../../cabecerahtml.php";
 <?php include_once "../../cabecera.php";?>
 <div class="grid_12">
 	<div class="contenido">
-    	<div class="grid_8 prefix_2 alpha">
+    	<div class="grid_8 prefix_2 alpha noimprimir">
         	<fieldset>
         	<div class="titulo"><?php echo $titulo;?></div>
             <form id="busqueda" action="busqueda.php" method="post">

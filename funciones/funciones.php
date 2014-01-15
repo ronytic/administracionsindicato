@@ -351,10 +351,10 @@ function num2letras($num, $fem = false, $dec = true) {
 function mostrarI($datos){
 	global $pdf;//function CuadroCuerpo($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tam=9){
 	foreach($datos as $k=>$v){
-		$pdf->CuadroCuerpoPersonalizado(60,($k).":",0,"L",0,"B");
+		$pdf->CuadroCuerpoPersonalizado(60,($k).":",1,"L",1,"B");
 		//$pdf->SetFont("arial","",12);
-		$pdf->CuadroCuerpo(100,($v),0,"L");
-		$pdf->Ln(8);
+		$pdf->CuadroCuerpo(122,($v),0,"L",1);
+		$pdf->Ln();
 	}
 }
 function porcentaje($total,$cantidad){

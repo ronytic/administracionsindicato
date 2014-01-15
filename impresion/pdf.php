@@ -76,8 +76,8 @@ php_start(0);
 			$this->Fuente("",$tam);
 			$this->MultiCell($txtAncho,5,utf8_decode($txt),$borde,$align,$relleno);	
 		}
-		function CuadroCuerpoPersonalizado($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tipo=""){
-			$this->Fuente($tipo);
+		function CuadroCuerpoPersonalizado($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$tipo="",$tam=10){
+			$this->Fuente($tipo,$tam);
 			$this->Cell($txtAncho,5,utf8_decode($txt),$borde,0,$align,$relleno);	
 		}
 		function CuadroCuerpoResaltar($txtAncho,$txt,$relleno=0,$align="L",$borde=0,$resaltar=2){

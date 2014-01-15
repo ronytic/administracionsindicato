@@ -16,6 +16,7 @@ $pdf->AddPage();
 mostrarI(array("Nombre"=>$sin['nombre'],
 				"Personería Jurídica"=>$sin['personeriajuridica'],
 				"Nombre del Responsable"=>$sin['nombreresponsable'],
+				"C.I. del Responsable"=>$sin['ciresponsable'],
 				"Teléfono"=>$sin['telefono'],
 				"Dirección"=>$sin['direccion'],
 				"Observación"=>$sin['observacion'],

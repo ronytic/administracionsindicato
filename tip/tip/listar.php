@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Listado de Líneas";
+$titulo="Listado de Tarjetas de Identificación Personal";
 $folder="../../";
 include_once("../../class/sindicato.php");
 $sindicato=new sindicato;

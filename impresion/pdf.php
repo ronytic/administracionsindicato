@@ -9,9 +9,9 @@ php_start(0);
 		function Header(){
 			global $idioma;
 			if($this->CurOrientation=="P"){$this->ancho=$this->w-34;}else{$this->ancho=$this->w-40;}	
-			$this->SetAuthor("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
-			$this->SetSubject("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
-			$this->SetCreator("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas de Sistemas");
+			$this->SetAuthor("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas & Asociados");
+			$this->SetSubject("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas & Asociados");
+			$this->SetCreator("Sistema Desarrollado por Ronald Nina Layme. Cel: 73230568 - Soluciones Tecnológicas & Asociados");
 			$this->SetLeftMargin(18);
 			$this->SetAutoPageBreak(true,15);
 			global $title,$gestion,$titulo,$logo,$idioma;

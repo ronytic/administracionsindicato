@@ -16,13 +16,22 @@ $linea=new linea;
 $modalidad=new modalidad;
 $servicio=new servicio;
 $sindicato=new sindicato;
+
 $lin=$linea->mostrarTodo($where);
 $totallineas=count($lin);
+
 $porcentajes=array();
 foreach($sindicato->mostrarTodo() as $ser){
+	
 	//$condicion=$where!=''?$where.' and codsindicato='.$ser['codsindicato']:'codservicio='.$ser['codservicio'];
 	$condicion="codsindicato=".$ser['codsindicato'];
 	$cantlineas=$linea->mostrarTodo($condicion);
+	
+	/*$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
+	if($mod['estadistica']==0){
+		continue;
+	}
+	$i++;*/
 	$porcentajes[$ser['nombre']]=porcentaje($totallineas,count($cantlineas));
 }
 

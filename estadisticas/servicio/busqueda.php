@@ -24,6 +24,7 @@ $porcentajes=array();
 foreach($servicio->mostrarTodo() as $ser){
 	$condicion=$where!=''?$where.' and codservicio='.$ser['codservicio']:'codservicio='.$ser['codservicio'];
 	$cantlineas=$linea->mostrarTodo($condicion);
+	
 	$porcentajes[$ser['nombre']]=porcentaje($totallineas,count($cantlineas));
 }
 

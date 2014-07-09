@@ -5,11 +5,13 @@ extract($_POST);
 
 $codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":" codsindicato LIKE '%'";
 
-$codservicio=$codservicio!=''?" codservicio='$codservicio'":" and codservicio LIKE '%'";
+$codservicio=$codservicio!=''?" codservicio='$codservicio'":" codservicio LIKE '%'";
 $unido=array();
 array_push($unido,$codservicio,$codsindicato);
+//print_r($unido);
 $where=implode(" and ",$unido);
 
+//echo $where;
 
 include_once '../../class/linea.php';
 include_once '../../class/sindicato.php';
@@ -22,7 +24,7 @@ $sindicato=new sindicato;
 $lin=$linea->mostrarTodo($where);
 $totallineas=count($lin);
 $porcentajes=array();
-foreach($modalidad->mostrarTodo() as $mod){
+foreach($modalidad->mostrarTodo("estadistica=1") as $mod){
 	$condicion=$where!=''?$where.' and codmodalidad='.$mod['codmodalidad']:'codmodalidad='.$mod['codmodalidad'];
 	$cantlineas=$linea->mostrarTodo($condicion);
 	$porcentajes[$mod['nombre']]=porcentaje($totallineas,count($cantlineas));

@@ -10,7 +10,7 @@ $sin=todolista($sindicato->mostrarTodo("","nombre"),"codsindicato","nombre","");
 
 include_once("../../class/modalidad.php");
 $modalidad=new modalidad;
-$mod=todolista($modalidad->mostrarTodo("","nombre"),"codmodalidad","nombre","");
+$mod=todolista($modalidad->mostrarTodo("estadistica=1","nombre"),"codmodalidad","nombre","");
 
 include_once("../../class/servicio.php");
 $servicio=new servicio;

@@ -9,7 +9,8 @@ $mod=array_shift($modalidad->mostrar($id));
 /*include_once("../../class/proveedor.php");
 $proveedor=new proveedor;
 $prov=todolista($proveedor->mostrarTodo(),"codproveedor","nombre","");*/
-
+$tiporeporte=array("reporte1"=>"Reporte 1","reporte2"=>"Reporte 2","reporte3"=>"Reporte 3","reporte4"=>"Reporte 4");
+$sino=array(0=>"No",1=>"Si");
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
 ?>
@@ -30,6 +31,12 @@ include_once '../../cabecerahtml.php';
 					</tr>
                     <tr>
 						<td><?php campos("Observación","observacion","textarea",$mod['observacion']);?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Tipo de Reporte","tiporeporte","select",$tiporeporte,0,"",$mod['tiporeporte']);?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Activar Mostrar en Reporte/ Estadísticas","estadistica","select",$sino,0,"",$mod['estadistica']);?></td>
 					</tr>
 					<tr><td><?php campos("Modificar","guardar","submit");?></td></tr>
 				</table>

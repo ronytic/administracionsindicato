@@ -8,6 +8,8 @@ extract($_POST);
 $valores=array(	"nombre"=>"'$nombre'",
 				"descripcion"=>"'$descripcion'",
 				"observacion"=>"'$observacion'",
+				"tiporeporte"=>"'$tiporeporte'",
+				"estadistica"=>"'$estadistica'",
 				);
 				$modalidad->actualizar($valores,$id);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";

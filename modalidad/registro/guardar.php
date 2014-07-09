@@ -18,6 +18,8 @@ if(($_FILES['curriculum']['type']=="application/pdf" || $_FILES['curriculum']['t
 $valores=array(	"nombre"=>"'$nombre'",
 				"descripcion"=>"'$descripcion'",
 				"observacion"=>"'$observacion'",
+				"tiporeporte"=>"'$tiporeporte'",
+				"estadistica"=>"'$estadistica'",
 				
 				);
 				$modalidad->insertar($valores);

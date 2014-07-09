@@ -58,11 +58,14 @@ class PDF extends PPDF{
 $pdf=new PDF("L","mm","legal");
 $pdf->AddPage();
 $totales=array();
-foreach($sindicato->mostrarTodos($where,"nombre") as $l){$i++;
+foreach($sindicato->mostrarTodos($where,"nombre") as $l){
 	$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
 	$sin=array_shift($sindicato->mostrar($l['codsindicato']));
 	$ser=array_shift($servicio->mostrar($l['codservicio']));
-
+	if($mod['estadistica']==0){
+		continue;
+	}
+	$i++;
 
 	$pdf->CuadroCuerpo(10,$i,0,"R",1);
 	$pdf->CuadroCuerpo(70,$l['nombre'],0,"",1);

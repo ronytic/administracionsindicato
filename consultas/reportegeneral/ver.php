@@ -69,10 +69,16 @@ class PDF extends PPDF{
 $pdf=new PDF("L","mm","legal");
 $pdf->AddPage();
 $totales=array();
-foreach($linea->mostrarTodos($where,"numerolinea") as $l){$i++;
+foreach($linea->mostrarTodos($where,"numerolinea") as $l){
 	$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
 	$sin=array_shift($sindicato->mostrar($l['codsindicato']));
 	$ser=array_shift($servicio->mostrar($l['codservicio']));
+	
+	if($mod['estadistica']==0){
+		continue;
+	}
+	$i++;
+	
 	$pi=str_split($l['paradainicial'],30);
 	$pf=str_split($l['paradafinal'],30);
 	

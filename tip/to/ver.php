@@ -53,7 +53,7 @@ $pdf->SetXY(25,72);
 $pdf->SetXY(25,70);
 $pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas,"utf8")),0,0,"C");
 $pdf->SetXY(25,74);
-$pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas,"utf8")),0,0,"C");
+$pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas2,"utf8")),0,0,"C");
 
 $pdf->SetFont("arial","B",11);
 $pdf->SetXY(30,84);

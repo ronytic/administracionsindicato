@@ -24,13 +24,13 @@ $lin=$linea->mostrarTodo("codsindicato=".$t['codsindicato']." and codmodalidad="
 $pdf=new FPDF("L","mm",array(217,168));
 $pdf->SetFont("arial","",10);
 $pdf->AddPage();
-
+$pdf->SetFont("arial","B",11);
 $pdf->SetXY(9,47);
 $pdf->Cell(50,4,utf8_encode(mb_strtoupper($t['placa'],"utf8")),0,0,"C");
 
 $pdf->SetXY(35,61);
 $pdf->Cell(130,4,utf8_encode(mb_strtoupper($sin['nombre'],"utf8")),0,0,"C");
-
+$pdf->SetFont("arial","",10);
 $pdf->SetXY(160,84);
 $pdf->Cell(45,4,utf8_encode(mb_strtoupper($mod['nombre'],"utf8")),0,0,"C");
 
@@ -55,13 +55,13 @@ $pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas,"utf8")),0,0,"C");
 $pdf->SetXY(25,74);
 $pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas,"utf8")),0,0,"C");
 
-$pdf->SetFont("arial","",10);
+$pdf->SetFont("arial","B",11);
 $pdf->SetXY(30,84);
 $pdf->Cell(105,4,utf8_encode(mb_strtoupper($t['propetario'],"utf8")),0,0,"C");
 
 $pdf->SetXY(50,92);
 $pdf->Cell(55,4,utf8_encode(mb_strtoupper($t['cipropetario'],"utf8")),0,0,"C");
-
+$pdf->SetFont("arial","",10);
 $pdf->SetXY(130,92);
 $pdf->Cell(70,4,utf8_encode(mb_strtoupper($t['polizaseguro'],"utf8")),0,0,"C");
 

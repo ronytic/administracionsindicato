@@ -22,11 +22,13 @@ $lin=$linea->mostrarTodo("codsindicato=".$t['codsindicato']." and codmodalidad="
 //print_r($lin);
 
 $pdf=new FPDF("L","mm",array(217,141));
-$pdf->SetFont("arial","",10);
+$pdf->SetFont("arial","B",11);
 $pdf->AddPage();
 
 $pdf->SetXY(15,61);
+
 $pdf->Cell(90,4,utf8_encode(mb_strtoupper($sin['nombre'],"utf8")),0,0,"C");
+$pdf->SetFont("arial","",10);
 
 $pdf->SetXY(115,61);
 $pdf->Cell(30,4,utf8_encode(mb_strtoupper($mod['nombre'],"utf8")),0,0,"C");
@@ -48,14 +50,16 @@ $pdf->SetXY(15,75);
 $pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas,"utf8")),0,0,"C");
 $pdf->SetXY(15,78);
 $pdf->Cell(130,4,utf8_encode(mb_strtoupper($numeroslineas2,"utf8")),0,0,"C");
-$pdf->SetFont("arial","",10);
+
+
+$pdf->SetFont("arial","B",11);
 
 $pdf->SetXY(15,94);
 $pdf->Cell(130,4,utf8_encode(mb_strtoupper($t['nombreconductor'],"utf8")),0,0,"C");
 
 $pdf->SetXY(15,111);
 $pdf->Cell(45,4,utf8_encode(mb_strtoupper($t['ciconductor'],"utf8")),0,0,"C");
-
+$pdf->SetFont("arial","",10);
 $pdf->SetXY(70,111);
 $pdf->Cell(35,4,utf8_encode(mb_strtoupper($t['categoriaconductor'],"utf8")),0,0,"C");
 

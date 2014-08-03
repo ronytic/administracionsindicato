@@ -21,7 +21,7 @@ $lin=$linea->mostrarTodo($where);
 $totallineas=count($lin);
 
 $porcentajes=array();
-foreach($sindicato->mostrarTodo() as $ser){
+foreach($sindicato->mostrarTodo("estadistica=1") as $ser){
 	
 	//$condicion=$where!=''?$where.' and codsindicato='.$ser['codsindicato']:'codservicio='.$ser['codservicio'];
 	$condicion="codsindicato=".$ser['codsindicato'];

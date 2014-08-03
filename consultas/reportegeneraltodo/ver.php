@@ -26,7 +26,7 @@ $servicio=new servicio;
 $sindicato=new sindicato;
 
 $where="$codsindicato $codmodalidad $codservicio";
-$where="";
+$where="estadistica=1";
 /*if(!empty($fechacontrato)){
 	$where="`fechacontrato`<='$fechacontrato'";
 }
@@ -81,5 +81,5 @@ foreach($sindicato->mostrarTodos($where,"nombre") as $l){
 }
 
 
-$pdf->Output();
+$pdf->Output("Reporte.pdf","I");
 ?>

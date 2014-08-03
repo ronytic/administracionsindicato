@@ -110,13 +110,13 @@ if($mod['tiporeporte']=="reporte3" || $mod['tiporeporte']=="reporte2"){//TAXIS, 
 	$pdf->CuadroCuerpoPersonalizado(182,$lin['longitudtramo'],0,"",1,"");
 	$pdf->Ln();
 	
-	$pdf->CuadroCuerpoPersonalizado(90,"PARADA AUTORIZADA",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(90,"PARADA DETALLADA",1,"C",1,"B");
 	$pdf->Line($pdf->GetX(),$pdf->GetY(),$pdf->GetX(),160);
-	$pdf->CuadroCuerpoPersonalizado(92,"VEHÍCHULOS AUTORIZADOS",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(92,"VEHÍCULOS AUTORIZADOS",1,"C",1,"B");
 	$pdf->Ln();
 	
 	$y=$pdf->GetY();
-	$pdf->CuadroCuerpoMulti(90,$lin['paradaautorizada'],9,"",0);
+	$pdf->CuadroCuerpoMulti(90,$lin['paradaautorizadadetallada'],9,"",0);
 	$x=$pdf->GetY();
 	$pdf->SetXY(108,$y);
 	$pdf->CuadroCuerpoMulti(92,$lin['vehiculosautorizados'],9,"",0);
@@ -178,7 +178,7 @@ if($mod['tiporeporte']=="reporte4"){//Trufi
 	$pdf->Ln();
 	$pdf->SetY(160);
 	
-	$pdf->CuadroCuerpoPersonalizado(182,"CARACTERÍSTICAS DEL VEHICULO",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(182,"CARACTERÍSTICAS DEL VEHÍCULO",1,"C",1,"B");
 	$pdf->Ln();
 	$pdf->CuadroCuerpoMulti(182,$lin['caracteristicasvehiculo'],0,"",0);
 	$pdf->SetY(200);

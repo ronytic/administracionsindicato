@@ -40,6 +40,9 @@ if($mod['tiporeporte']=="reporte1" || $mod['tiporeporte']=="reporte4"){
 	$pdf->CuadroCuerpoPersonalizado(182,"Trayecto de Vuelta",1,"C",1,"B");
 	$pdf->Ln();
 	$pdf->CuadroCuerpoMulti(182,$lin['trayectovuelta'],0,"",1);
+	$pdf->CuadroCuerpoPersonalizado(182,"Características del Vehículo",1,"C",1,"B");
+	$pdf->Ln();
+	$pdf->CuadroCuerpoMulti(182,$lin['caracteristicasvehiculo'],0,"",1);
 	mostrarI(array(
 					"Modalidad"=>$mod['nombre'],
 					"Servicio"=>$ser['nombre']));

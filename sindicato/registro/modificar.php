@@ -9,7 +9,7 @@ $sin=array_shift($sindicato->mostrar($id));
 /*include_once("../../class/proveedor.php");
 $proveedor=new proveedor;
 $prov=todolista($proveedor->mostrarTodo(),"codproveedor","nombre","");*/
-
+$sino=array(0=>"No",1=>"Si");
 include_once '../../funciones/funciones.php';
 include_once '../../cabecerahtml.php';
 ?>
@@ -42,6 +42,9 @@ include_once '../../cabecerahtml.php';
 					</tr>
                     <tr>
 						<td><?php campos("Observación","observacion","textarea",$sin['observacion']);?></td>
+					</tr>
+                    <tr>
+						<td><?php campos("Activar Mostrar en Reporte/ Estadísticas","estadistica","select",$sino,0,"",$sin['estadistica']);?></td>
 					</tr>
 					<tr><td><?php campos("Guardar","guardar","submit");?></td></tr>
 				</table>

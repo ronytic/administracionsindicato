@@ -23,6 +23,7 @@ $valores=array(	"nombre"=>"'$nombre'",
 				"direccion"=>"'$direccion'",
 				"observacion"=>"'$observacion'",
 				
+				"estadistica"=>"'$estadistica'",
 				);
 				$sindicato->insertar($valores);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";

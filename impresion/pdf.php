@@ -17,8 +17,8 @@ php_start(0);
 			global $title,$gestion,$titulo,$logo,$idioma;
 			$fecha=date("d-m-Y");
 			
-			$this->Fuente("B",10);
-			$this->MultiCell($this->ancho,6,utf8_decode("\nGOBIERNO AUTONOMO MUNICIPAL DE EL ALTO\nDIRECCIÓN DE TRÁFICO Y VIALIDAD\nUNIDAD DE TRÁFICO Y TRANSPORTE\n\n"),1,"C");
+			$this->Fuente("B",9);
+			$this->MultiCell($this->ancho,6,utf8_decode("\nGOBIERNO AUTONOMO MUNICIPAL DE EL ALTO\nDIRECCIÓN DE TRÁFICO Y VIALIDAD\nUNIDAD DE ADMINISTRACIÓN Y CONTROL DEL TRANSITO URBANO \n\n"),1,"C");
 			//$this->Line(10,10,$this->ancho+24,10);
 			$this->Line(18,46,18,$this->h-15);
 			if($this->CurOrientation=="P"){

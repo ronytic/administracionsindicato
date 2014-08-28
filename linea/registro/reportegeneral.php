@@ -54,8 +54,8 @@ if($mod['tiporeporte']=="reporte1"){//Minibuses,microbus,carrys
 	$pdf->CuadroCuerpoPersonalizado(92,$ser['nombre'],0,"",1,"");
 	
 	$pdf->Ln();
-	$pdf->CuadroCuerpoPersonalizado(90,"PARADA INICIAL",1,"C",1,"B");
-	$pdf->CuadroCuerpoPersonalizado(92,"PARADA FINAL",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(90,"ORIGEN",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(92,"DESTINO",1,"C",1,"B");
 	$pdf->Ln();
 	$pdf->CuadroCuerpoPersonalizado(90,$lin['paradainicial'],0,"",1,"");
 	$pdf->CuadroCuerpoPersonalizado(92,$lin['paradafinal'],0,"",1,"");
@@ -155,8 +155,8 @@ if($mod['tiporeporte']=="reporte4"){//Trufi
 	$pdf->CuadroCuerpoPersonalizado(92,$ser['nombre'],0,"",1,"");
 	
 	$pdf->Ln();
-	$pdf->CuadroCuerpoPersonalizado(90,"PARADA INICIAL",1,"C",1,"B");
-	$pdf->CuadroCuerpoPersonalizado(92,"PARADA FINAL",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(90,"ORIGEN",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(92,"DESTINO",1,"C",1,"B");
 	$pdf->Ln();
 	$pdf->CuadroCuerpoPersonalizado(90,$lin['paradainicial'],0,"",1,"",8);
 	$pdf->CuadroCuerpoPersonalizado(92,$lin['paradafinal'],0,"",1,"",8);

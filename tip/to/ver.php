@@ -24,7 +24,7 @@ $lin=$linea->mostrarTodo("codsindicato=".$t['codsindicato']." and codmodalidad="
 $pdf=new FPDF("L","mm",array(217,168));
 $pdf->SetFont("arial","",10);
 $pdf->AddPage();
-$pdf->SetFont("arial","B",11);
+$pdf->SetFont("arial","B",12);
 $pdf->SetXY(9,47);
 $pdf->Cell(50,4,utf8_encode(mb_strtoupper($t['placa'],"utf8")),0,0,"C");
 
@@ -105,7 +105,7 @@ $pdf->Cell(35,4,utf8_encode(mb_strtoupper(strftime("%B",strtotime($t['fechadereg
 $pdf->SetXY(96,137);
 $pdf->Cell(15,4,utf8_encode(mb_strtoupper(date("Y",strtotime($t['fechaderegistro'])),"utf8")),0,0,"C");
 
-
+$pdf->SetFont("arial","B",12);
 $pdf->SetXY(190,33);
 $pdf->Cell(15,4,utf8_encode(mb_strtoupper(date("Y",strtotime($t['fechaderegistro'])),"utf8")),0,0,"C");
 

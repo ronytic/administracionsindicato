@@ -34,6 +34,36 @@ if (!empty($_POST)) {
 		$datos[$i]['codservicio']=$ser['nombre'];
 	}
 	$titulo=array("numerolinea"=>"Número de Linea","color"=>"Color","paradainicial"=>"Parada Inicial","paradafinal"=>"Parada Final","longitudtramo"=>"Longitud Tramo","numeropasajeros"=>"Número de Pasajeros","codmodalidad"=>"Modalidad","codservicio"=>"Servicio","codsindicato"=>"Sindicato");
-	listadoTabla($titulo,$datos,1,"modificar.php","eliminar.php","ver.php",array("Ver Datos General"=>"reportegeneral.php"),"","_blank");
+	
+	
+	
+	$rep="ver.php";
+	$modi="modificar.php";
+	$eli="eliminar.php";
+	
+	switch($nivel){
+		case 1:{//$modi="";//SuperAdmin
+				//$eli="";
+				//$rep="";
+				}break;
+		case 2:{$modi="";//Dirección
+				$eli="";
+				//$rep="";
+				}break;
+		case 3:{$modi="";//Unidad de Trafico
+				$eli="";
+				//$rep="";
+				}break;
+		case 4:{//$modi="";//Tecnico
+				//$eli="";
+				//$rep="";
+				}break;
+		case 5:{$modi="";//Secretaria
+				$eli="";
+				//$rep="";
+				}break;
+	}
+	
+	listadoTabla($titulo,$datos,1,$modi,$eli,$rep,array("Ver Datos General"=>"reportegeneral.php"),"","_blank");
 }
 ?>

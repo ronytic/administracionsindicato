@@ -15,25 +15,25 @@ if (!empty($_POST)) {
 	$eli="eliminar.php";
 	
 	switch($nivel){
-		case 1:{//$modi="";
+		case 1:{//$modi="";//SuperAdmin
 				//$eli="";
 				//$rep="";
 				}break;
-		case 2:{//$modi="";
-				//$eli="";
-				//$rep="";
+		case 2:{$modi="";//Dirección
+				$eli="";
+				$rep="";
 				}break;
-		case 3:{//$modi="";
-				//$eli="";
-				//$rep="";
+		case 3:{$modi="";//Unidad de Trafico
+				$eli="";
+				$rep="";
 				}break;
-		case 4:{//$modi="";
+		case 4:{$modi="";//Tecnico
 				//$eli="";
-				//$rep="";
+				$rep="";
 				}break;
-		case 5:{//$modi="";
-				//$eli="";
-				//$rep="";
+		case 5:{$modi="";//Secretaria
+				$eli="";
+				$rep="";
 				}break;
 	}
 	listadoTabla($titulo,$mod,1,$modi,$eli,$rep);

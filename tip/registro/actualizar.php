@@ -51,6 +51,10 @@ $valores=array(	"codsindicato"=>"'$codsindicato'",
 				"categoriaconductor"=>"'$categoriaconductor'",
 				"numerogratuito"=>"'$numerogratuito'",
 				
+				"codbarrapropetario"=>"'$codbarrapropetario'",
+				"codbarravehiculo"=>"'$codbarravehiculo'",
+				
+				
 				);
 				if($fotografiapropetario!=""){
 					$valores=array_merge(array("fotografiapropetario"=>"'$fotografiapropetario'"),$valores);

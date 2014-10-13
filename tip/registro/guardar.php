@@ -51,6 +51,11 @@ $valores=array(	"codsindicato"=>"'$codsindicato'",
 				"numerogratuito"=>"'$numerogratuito'",
 				"fotografiapropetario"=>"'$fotografiapropetario'",
 				"fotografiaconductor"=>"'$fotografiaconductor'",
+				
+				"codbarrapropetario"=>"'$codbarrapropetario'",
+				"codbarravehiculo"=>"'$codbarravehiculo'",
+				
+				
 				);
 				$tip->insertar($valores);
 				$mensaje[]="SUS DATOS SE GUARDARON CORRECTAMENTE";

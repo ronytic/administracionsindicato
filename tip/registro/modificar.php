@@ -50,22 +50,22 @@ include_once '../../cabecerahtml.php';
 					</tr>
 					<tr>
 						<td><?php campos("Placa","placa","text",$t['placa'],1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Nombre del Propietario","propetario","text",$t['propetario'],0,array("size"=>50));?></td>
+                        <td><?php campos("Nombre del Propietario","propetario","text",$t['propetario'],0,array("size"=>30));?></td>
                         <td><?php campos("C.I. Propietario","cipropetario","text",$t['cipropetario'],0,array("size"=>20));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Poliza de Seguro","polizaseguro","text",$t['polizaseguro'],1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Marca","marca","text",$t['marca'],0,array("size"=>40));?></td>
+                        <td><?php campos("Marca","marca","text",$t['marca'],0,array("size"=>30));?></td>
                         <td><?php campos("Modelo","modelo","text",$t['modelo'],0,array("size"=>30));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Color","color","text",$t['color'],1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Clase de Vehículo","clasevehiculo","text",$t['clasevehiculo'],0,array("size"=>50));?></td>
+                        <td><?php campos("Clase de Vehículo","clasevehiculo","text",$t['clasevehiculo'],0,array("size"=>30));?></td>
                         <td><?php campos("Nº de Asientos","nasientos","text",$t['nasientos'],0,array("size"=>30));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Nº de Motor","nmotor","text",$t['nmotor'],1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Nº de Chasis","nchasis","text",$t['nchasis'],0,array("size"=>50));?></td>
+                        <td><?php campos("Nº de Chasis","nchasis","text",$t['nchasis'],0,array("size"=>30));?></td>
                         <td><?php campos("Licencia Valida Hasta","licenciavalida","date",$t['licenciavalida'],0,array("size"=>30));?></td>
 					</tr>
                     <tr>

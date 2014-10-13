@@ -40,22 +40,22 @@ include_once '../../cabecerahtml.php';
 					</tr>
 					<tr>
 						<td><?php campos("Placa","placa","text","",1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Nombre del Propietario","propetario","text","",0,array("size"=>50));?></td>
+                        <td><?php campos("Nombre del Propietario","propetario","text","",0,array("size"=>30));?></td>
                         <td><?php campos("C.I. Propietario","cipropetario","text","",0,array("size"=>20));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Poliza de Seguro","polizaseguro","text","",1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Marca","marca","text","",0,array("size"=>40));?></td>
+                        <td><?php campos("Marca","marca","text","",0,array("size"=>30));?></td>
                         <td><?php campos("Modelo","modelo","text","",0,array("size"=>30));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Color","color","text","",1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Clase de Vehículo","clasevehiculo","text","",0,array("size"=>50));?></td>
+                        <td><?php campos("Clase de Vehículo","clasevehiculo","text","",0,array("size"=>30));?></td>
                         <td><?php campos("Nº de Asientos","nasientos","text","",0,array("size"=>30));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Nº de Motor","nmotor","text","",1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Nº de Chasis","nchasis","text","",0,array("size"=>50));?></td>
+                        <td><?php campos("Nº de Chasis","nchasis","text","",0,array("size"=>30));?></td>
                         <td><?php campos("Licencia Valida Hasta","licenciavalida","date","",0,array("size"=>30));?></td>
 					</tr>
                     <tr>

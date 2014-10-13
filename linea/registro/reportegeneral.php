@@ -167,14 +167,14 @@ if($mod['tiporeporte']=="reporte4"){//Trufi
 	$pdf->Ln();
 	$pdf->CuadroCuerpoPersonalizado(90,"TRAYECTO DE IDA",1,"C",1,"B");
 	$pdf->Line($pdf->GetX(),$pdf->GetY(),$pdf->GetX(),160);
-	$pdf->CuadroCuerpoPersonalizado(92,"TRAYECTO DE RETORNO",1,"C",1,"B");
+	$pdf->CuadroCuerpoPersonalizado(92,"VEHÍCULOS AUTORIZADOS",1,"C",1,"B");
 	$pdf->Ln();
 	
 	$y=$pdf->GetY();
 	$pdf->CuadroCuerpoMulti(90,$lin['trayectoida'],9,"J",0);
 	$x=$pdf->GetY();
 	$pdf->SetXY(108,$y);
-	$pdf->CuadroCuerpoMulti(92,$lin['trayectovuelta'],9,"J",0);
+	$pdf->CuadroCuerpoMulti(92,$lin['vehiculosautorizados'],9,"J",0);
 	$pdf->Ln();
 	$pdf->SetY(160);
 	

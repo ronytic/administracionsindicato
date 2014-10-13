@@ -84,7 +84,7 @@ function cambiar(e) {
                         <td>
                         <?php campos("Vehículos Autorizados","vehiculosautorizados","textarea",$lin['vehiculosautorizados'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2 reporte4"));?>
 						<?php campos("Trayecto de Vuelta","trayectovuelta","textarea",$lin['trayectovuelta'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1"));?>
-                        <?php campos("Caracteristicas del Vehiculo","caracteristicasvehiculo","textarea",$lin['caracteristicasvehiculo'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte3 reporte4"));?></td>
+                        <?php campos("Caracteristicas del Vehiculo","caracteristicasvehiculo","textarea",$lin['caracteristicasvehiculo'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte3 reporte4 reporte2"));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Longitud de Tramo","longitudtramo","text",$lin['longitudtramo'],0,array("size"=>50,"class"=>"ocultar reporte1 reporte4"));?></td>

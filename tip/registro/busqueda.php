@@ -16,7 +16,7 @@ if (!empty($_POST)) {
 	$modalidad=new modalidad;
 	$servicio=new servicio;
 	$sindicato=new sindicato;
-	$ti=$tip->mostrarTodo("placa LIKE '%$placa%' $codsindicato $codmodalidad  and propetario LIKE '%$propetario%' and cipropetario LIKE '%$cipropetario%' and nombreconductor LIKE '%$nombreconductor%' and ciconductor LIKE '%$ciconductor%'","placa");
+	$ti=$tip->mostrarTodo("placa LIKE '%$placa%' $codsindicato $codmodalidad  and propetario LIKE '%$propetario%' and cipropetario LIKE '%$cipropetario%' and nombreconductor LIKE '%$nombreconductor%' and ciconductor LIKE '%$ciconductor%' and codbarravehiculo LIKE '%$codbarravehiculo%' and codbarrapropetario LIKE '%$codbarrapropetario%'","placa");
 	
 	foreach($ti as $t){$i++;
 		$mod=array_shift($modalidad->mostrar($t['codmodalidad']));

@@ -38,8 +38,8 @@ include_once "../../cabecerahtml.php";
                         <td><?php campos("Nombre del Conductor","nombreconductor","text","",0,array("size"=>20));?></td>
                         <td><?php campos("C.I. Conductor","ciconductor","text","",0,array("size"=>20));?></td>
                     </tr>
-                    	<td colspan="2"><?php campos("Código de Barra del Vehículo","codbarravehiculo","text",$t['codbarravehiculo'],0,array("size"=>20,"required"=>"required"));?></td>
-                        <td colspan="2"><?php campos("Código de Barra del Propetario","codbarrapropetario","text",$t['codbarrapropetario'],0,array("size"=>20,"required"=>"required"));?></td>
+                    	<td colspan="2"><?php campos("Código de Barra del Vehículo","codbarravehiculo","text",$t['codbarravehiculo'],0,array("size"=>20,""=>""));?></td>
+                        <td colspan="2"><?php campos("Código de Barra del Propetario","codbarrapropetario","text",$t['codbarrapropetario'],0,array("size"=>20,""=>""));?></td>
                     <tr>
                     </tr>
                     <tr>

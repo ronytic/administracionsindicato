@@ -72,7 +72,7 @@ include_once '../../cabecerahtml.php';
                     	<td colspan="2">
                         <?php campos("Fecha de Registro","fechaderegistro","date",$t['fechaderegistro'],0);?>
                         </td>
-                        <td><?php campos("Código de Barra del Propetario","codbarrapropetario","text",$t['codbarrapropetario'],0,array("size"=>30,"required"=>"required"));?></td>
+                        <td><?php campos("Código de Barra del Propetario","codbarrapropetario","password",$t['codbarrapropetario'],0,array("size"=>30,"required"=>"required"));?></td>
                     </tr>
 				</table>
                 <div class="titulo"><?php echo "Registro de Tarjeta de Identificación Personal"?></div>
@@ -101,7 +101,7 @@ include_once '../../cabecerahtml.php';
                         <?php }else{echo "No se cuenta con una fotografía del conductor";}?></td>
                     </tr>
                     <tr>
-                    	<td><?php campos("Código de Barra del Vehículo","codbarravehiculo","text",$t['codbarravehiculo'],0,array("size"=>30,"required"=>"required"));?></td>
+                    	<td><?php campos("Código de Barra del Vehículo","codbarravehiculo","password",$t['codbarravehiculo'],0,array("size"=>30,"required"=>"required"));?></td>
                     </tr>
 					<tr><td colspan="2"><?php campos("Guardar","guardar","submit");?></td></tr>
 				</table>

@@ -183,6 +183,9 @@ class bd{
 	function eliminar($Cod){
 		$this->updateRow(array("activo"=>0),"cod".$this->tabla."=$Cod");	
 	}
+	function eliminar2($Cod,$Campo){
+		$this->updateRow(array("activo"=>0),"".$Campo."=$Cod");	
+	}
 	/*Fin de Metodos*/
 }
 ?>

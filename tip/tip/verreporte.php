@@ -11,10 +11,13 @@ include_once '../../class/sindicato.php';
 include_once '../../class/servicio.php';
 include_once '../../class/modalidad.php';
 include_once '../../class/linea.php';
+include_once '../../class/tipgenerado.php';
 $modalidad=new modalidad;
 $servicio=new servicio;
 $sindicato=new sindicato;
 $linea=new linea;
+$tipgenerado=new tipgenerado;
+
 	
 $mod=array_shift($modalidad->mostrar($t['codmodalidad']));
 $sin=array_shift($sindicato->mostrar($t['codsindicato']));
@@ -36,10 +39,14 @@ $pdf->Cell(30,4,utf8_decode(mb_strtoupper($mod['nombre'],"utf8")),0,0,"C");
 $numeroslineas='';
 $numeroslineas2='';
 $i=0;
+//print_r($lineas);
+$tipgenerado->eliminar2($id,"codtip");
 if(count($lineas)){
 	$numeroslineas=array();
 	$numeroslineas2=array();
-	foreach($lineas as $l){$i++;
+	foreach($lineas as $l){
+		$tipgenerado->insertar(array("codtip"=>$id,"numerolinea"=>"'".$l."'"));
+		$i++;
 		if($i<=13){
 		array_push($numeroslineas,$l);	
 		}else{

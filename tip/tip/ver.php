@@ -6,6 +6,7 @@ include_once '../../class/sindicato.php';
 include_once '../../class/servicio.php';
 include_once '../../class/modalidad.php';
 include_once '../../class/linea.php';
+include_once '../../class/tipgenerado.php';
 
 $id=$_GET['id'];
 
@@ -18,6 +19,7 @@ $modalidad=new modalidad;
 $servicio=new servicio;
 $sindicato=new sindicato;
 $linea=new linea;
+$tipgenerado=new tipgenerado;
 
 $dest=array("Procesado"=>"Procesado","Directo"=>"Directo");
 
@@ -47,8 +49,10 @@ include_once "../../cabecerahtml.php";
                         	<label for="l<?php echo $i;?>"><?php echo $l['numerolinea'];?></label>
                         </td>
                     	<td>
-                        	
-							<input type="checkbox" name="lineas[]" value="<?php echo $l['numerolinea'];?>" id="l<?php echo $i?>" ></td>
+                        	<?php $tg=$tipgenerado->mostrarTodo("codtip=$id and numerolinea='".$l['numerolinea']."'");
+							
+							?>
+							<input type="checkbox" name="lineas[]" value="<?php echo $l['numerolinea'];?>" id="l<?php echo $i?>" <?php echo count($tg)>0?"checked":"";?>></td>
                     </tr>
                     <?php }?>
                     <tr>

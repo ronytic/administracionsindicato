@@ -10,10 +10,12 @@ include_once '../../class/sindicato.php';
 include_once '../../class/servicio.php';
 include_once '../../class/modalidad.php';
 include_once '../../class/linea.php';
+include_once '../../class/togenerado.php';
 $modalidad=new modalidad;
 $servicio=new servicio;
 $sindicato=new sindicato;
 $linea=new linea;
+$togenerado=new togenerado;
 
 	
 $mod=array_shift($modalidad->mostrar($t['codmodalidad']));
@@ -40,10 +42,12 @@ $numeroslineas='';
 $numeroslineas2='';
 $i=0;
 
+$togenerado->eliminar2($id,"codtip");
 if(count($lineas)){
 	$numeroslineas=array();
 	$numeroslineas2=array();
 	foreach($lineas as $l){$i++;
+	$togenerado->insertar(array("codtip"=>$id,"numerolinea"=>"'".$l."'"));
 		if($i<=13){
 		array_push($numeroslineas,$l);	
 		}else{

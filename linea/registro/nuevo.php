@@ -71,7 +71,7 @@ function cambiar(e) {
                         <td><?php campos("Parada Final","paradafinal","text","",0,array("size"=>50,"class"=>"ocultar reporte1 reporte4"));?></td>
 					</tr>
                     <tr>
-						<td><?php campos("Trayecto de Ida","trayectoida","textarea","",0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1 reporte4"));?>
+						<td style="vertical-align: top;"><?php campos("Trayecto de Ida","trayectoida","textarea","",0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1 reporte4"));?>
                         	<?php campos("Parada Autorizada Detallada","paradaautorizadadetallada","textarea","",0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2 reporte3"));?>
                         </td>
                         <td>

@@ -78,12 +78,12 @@ function cambiar(e) {
                         <td><?php campos("Parada Final","paradafinal","text",$lin['paradafinal'],0,array("size"=>50,"class"=>"ocultar reporte1 reporte4"));?></td>
 					</tr>
                     <tr>
-						<td><?php campos("Trayecto de Ida","trayectoida","textarea",$lin['trayectoida'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1 reporte4"));?>
+						<td style="vertical-align: top;"><?php campos("Trayecto de Ida","trayectoida","textarea",$lin['trayectoida'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1 reporte4"));?>
                         	<?php campos("Parada Autorizada Detallada","paradaautorizadadetallada","textarea",$lin['paradaautorizadadetallada'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2 reporte3"));?>
                         </td>
                         <td>
-                        <?php campos("Vehículos Autorizados","vehiculosautorizados","textarea",$lin['vehiculosautorizados'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2 reporte4"));?>
-						<?php campos("Trayecto de Vuelta","trayectovuelta","textarea",$lin['trayectovuelta'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1"));?>
+                        <?php campos("Vehículos Autorizados","vehiculosautorizados","textarea",$lin['vehiculosautorizados'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2"));?>
+						<?php campos("Trayecto de Vuelta","trayectovuelta","textarea",$lin['trayectovuelta'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1 reporte4"));?>
                         <?php campos("Caracteristicas del Vehiculo","caracteristicasvehiculo","textarea",$lin['caracteristicasvehiculo'],0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte3 reporte4 reporte2"));?></td>
 					</tr>
                     <tr>

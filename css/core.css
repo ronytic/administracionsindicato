@@ -602,4 +602,10 @@ table td{
 small{
 	font-size:11px;
 }
+.rojo{
+    color:rgba(255,56,59,1.00);
+    font-weight:bold;
+    font-size:140%;
+    cursor:help;
+}
 /*Fin de Texto*/

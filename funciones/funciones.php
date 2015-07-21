@@ -149,8 +149,9 @@ function mostrarUltimo($data){
 function campos($texto,$nombre,$tipo,$valores="",$autofocus=0,$adicional=array(),$valorseleccion=""){
 	if($tipo=="" && empty($tipo)){$tipo="text";}
 	if(empty($adicional) && $adicional==""){$adicional=array();}
+    
 	if($tipo!="submit"){
-		?><label for="<?php echo $nombre;?>" <?php foreach($adicional as $k=>$v){echo ' '.$k.'="'.$v.'"';}?>><?php echo $texto;?></label><?php 
+		?><label for="<?php echo $nombre;?>" <?php foreach($adicional as $k=>$v){echo ' '.$k.'="'.$v.'"';}?>><?php echo $texto;?> <span class="rojo" title="Campo Obligatorio para el registro"><?php if(in_array("required",$adicional)){echo "*";}?></span></label><?php 
 	}
 	switch($tipo){
 		case "textarea":{?>

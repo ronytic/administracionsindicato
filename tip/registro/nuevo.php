@@ -39,19 +39,24 @@ include_once '../../cabecerahtml.php';
                         
 					</tr>
 					<tr>
-						<td><?php campos("Placa","placa","text","",1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Nombre del Propietario","propetario","text","",0,array("size"=>30));?></td>
-                        <td><?php campos("C.I. Propietario","cipropetario","text","",0,array("size"=>20));?></td>
+						<td><?php campos("Placa","placa","text","",1,array(""=>"","size"=>20,"required"=>"required"));?></td>
+                        <td><?php campos("Nombre del Propietario","propetario","text","",0,array("size"=>30,"required"=>"required"));?></td>
+                        <td><?php campos("C.I. Propietario","cipropetario","text","",0,array("size"=>20,"required"=>"required"));?></td>
 					</tr>
+                    <tr>
+                        <td colspan="3">
+                        <?php campos("Dirección del Propetario","direccion","text","",0,array("size"=>80));?>
+                        </td>
+                    </tr>
                     <tr>
 						<td><?php campos("Poliza de Seguro","polizaseguro","text","",1,array(""=>"","size"=>20));?></td>
                         <td><?php campos("Marca","marca","text","",0,array("size"=>30));?></td>
                         <td><?php campos("Modelo","modelo","text","",0,array("size"=>30));?></td>
 					</tr>
                     <tr>
-						<td><?php campos("Color","color","text","",1,array(""=>"","size"=>20));?></td>
-                        <td><?php campos("Clase de Vehículo","clasevehiculo","text","",0,array("size"=>30));?></td>
-                        <td><?php campos("Nº de Asientos","nasientos","text","",0,array("size"=>30));?></td>
+						<td><?php campos("Color","color","text","",1,array(""=>"","size"=>20,"required"=>"required"));?></td>
+                        <td><?php campos("Clase de Vehículo","clasevehiculo","text","",0,array("size"=>30,"required"=>"required"));?></td>
+                        <td><?php campos("Nº de Asientos","nasientos","text","",0,array("size"=>30,"required"=>"required"));?></td>
 					</tr>
                     <tr>
 						<td><?php campos("Nº de Motor","nmotor","text","",1,array(""=>"","size"=>20));?></td>
@@ -71,6 +76,11 @@ include_once '../../cabecerahtml.php';
                         <td><?php campos("Nombre del Conductor","nombreconductor","text","",0,array("size"=>50));?></td>
                         <td><?php campos("C.I. Conductor","ciconductor","text","",0,array("size"=>20));?></td>
 					</tr>
+                    <tr>
+                        <td colspan="3">
+                        <?php campos("Dirección del Conductor","direccionconductor","text","",0,array("size"=>80));?>
+                        </td>
+                    </tr>
                     <tr>
 						<td><?php campos("Categoria de la Licencia","categoriaconductor","select",$categoria,1,array(""=>"","size"=>20));?></td>
                         <td><?php campos("Número Gratuito","numerogratuito","text","",0,array("size"=>40));?></td>

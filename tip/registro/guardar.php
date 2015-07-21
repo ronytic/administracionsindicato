@@ -33,6 +33,8 @@ $valores=array(	"codsindicato"=>"'$codsindicato'",
 				"placa"=>"'$placa'",
 				"propetario"=>"'$propetario'",
 				"cipropetario"=>"'$cipropetario'",
+                "direccion"=>"'$direccion'",
+                
 				"polizaseguro"=>"'$polizaseguro'",
 				"marca"=>"'$marca'",
 				"modelo"=>"'$modelo'",
@@ -47,6 +49,8 @@ $valores=array(	"codsindicato"=>"'$codsindicato'",
 				
 				"nombreconductor"=>"'$nombreconductor'",
 				"ciconductor"=>"'$ciconductor'",
+                "direccionconductor"=>"'$direccionconductor'",
+                
 				"categoriaconductor"=>"'$categoriaconductor'",
 				"numerogratuito"=>"'$numerogratuito'",
 				"fotografiapropetario"=>"'$fotografiapropetario'",

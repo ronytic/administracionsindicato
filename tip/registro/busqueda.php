@@ -64,6 +64,6 @@ if (!empty($_POST)) {
 				}break;
 	}
 	
-	listadoTabla($titulo,$datos,1,$modi,$eli,"","","","_blank");
+	listadoTabla($titulo,$datos,1,$modi,$eli,"ver.php","","","_blank");
 }
 ?>

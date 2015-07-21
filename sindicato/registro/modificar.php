@@ -43,9 +43,11 @@ include_once '../../cabecerahtml.php';
                     <tr>
 						<td><?php campos("Observación","observacion","textarea",$sin['observacion']);?></td>
 					</tr>
+                     <?php if($_SESSION['nivel']==1){?>
                     <tr>
 						<td><?php campos("Activar Mostrar en Reporte/ Estadísticas","estadistica","select",$sino,0,"",$sin['estadistica']);?></td>
 					</tr>
+                    <?php }?>
 					<tr><td><?php campos("Guardar","guardar","submit");?></td></tr>
 				</table>
                 </form>

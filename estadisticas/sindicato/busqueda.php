@@ -1,7 +1,13 @@
 <?php
 include_once("../../login/check.php");
-$titulo="Estadísticas por Sindicato";
 extract($_POST);
+if($anio=="%"){
+    $tituloanio="Todos los años";
+}else{
+    $tituloanio=$anio;
+}
+$titulo="Estadísticas por Sindicato de $tituloanio";
+
 
 $codsindicato=$codsindicato!=''?" codsindicato='$codsindicato'":'';
 $codmodalidad=$codmodalidad!=''?" and codmodalidad='$codmodalidad'":'';
@@ -21,7 +27,8 @@ $lin=$linea->mostrarTodo($where);
 $totallineas=count($lin);
 
 $porcentajes=array();
-foreach($sindicato->mostrarTodo("estadistica=1") as $ser){
+
+foreach($sindicato->mostrarTodo("estadistica=1 and YEAR(fecha) LIKE '$anio'") as $ser){
 	
 	//$condicion=$where!=''?$where.' and codsindicato='.$ser['codsindicato']:'codservicio='.$ser['codservicio'];
 	$condicion="codsindicato=".$ser['codsindicato'];

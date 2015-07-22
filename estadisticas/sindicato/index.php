@@ -29,8 +29,16 @@ include_once "../../cabecerahtml.php";
             <form id="busqueda" action="busqueda.php" method="post">
                 <table class="tablabus">
                     <tr>
-                         <!--<td><?php campos("Sindicato","codsindicato","select",$sin);?></td>
-                        <td><?php campos("Modalidad","codmodalidad","select",$mod);?></td>
+                        <td>Seleccionar un Año
+                            <select name="anio">
+                                <option value="%">Todos</option>
+                                <?php for($i=2013;$i<=date("Y");$i++){?>
+                                <option value="<?php echo $i?>"><?php echo $i?></option>
+                                <?php }?>
+                            </select>
+                        
+                        </td>
+                        <!--<td><?php campos("Modalidad","codmodalidad","select",$mod);?></td>
                        <td><?php campos("Servicio","codservicio","select",$ser);?></td>-->
                         
                     </tr>

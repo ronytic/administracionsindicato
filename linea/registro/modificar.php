@@ -88,7 +88,7 @@ function cambiar(e) {
 					</tr>
                     <tr>
 						<td><?php campos("Longitud de Tramo","longitudtramo","text",$lin['longitudtramo'],0,array("size"=>50,"class"=>"ocultar reporte1 reporte4"));?></td>
-                        <td><?php campos("Número de Pasajeros","numeropasajeros","text",$lin['numeropasajeros'],0,array("size"=>50,"class"=>"ocultar reporte1 reporte3 reporte4"));?></td>
+                        <td><?php campos("Número de Pasajeros","numeropasajeros","number",$lin['numeropasajeros'],0,array("size"=>50,"min"=>0,"step"=>1,"class"=>"der ocultar reporte1 reporte3 reporte4"));?></td>
 					</tr>
                     
                     <tr>

@@ -78,12 +78,11 @@ function cambiar(e) {
                         	<?php campos("Vehículos Autorizados","vehiculosautorizados","textarea","",0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2"));?>
 							<?php campos("Trayecto de Vuelta","trayectovuelta","textarea","",0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte1 reporte4"));?>
                         	<?php campos("Caracteristicas del Vehiculo","caracteristicasvehiculo","textarea","",0,array("rows"=>20,"cols"=>40,"class"=>"ocultar reporte2 reporte3 reporte4"));?>
-                        	
                         </td>
 					</tr>
                     <tr>
 						<td><?php campos("Longitud de Tramo","longitudtramo","text","",0,array("size"=>50,"class"=>"ocultar reporte1 reporte4"));?></td>
-                        <td><?php campos("Número de Pasajeros","numeropasajeros","text","",0,array("size"=>50,"class"=>"ocultar reporte1 reporte3 reporte4"));?></td>
+                        <td><?php campos("Número de Pasajeros","numeropasajeros","number","",0,array("size"=>50,"min"=>0,"step"=>1,"class"=>"ocultar reporte1 reporte3 reporte4 der"));?></td>
 					</tr>
                     
                     <tr>

@@ -8,7 +8,10 @@ if (!empty($_POST)) {
 	include_once '../../class/modalidad.php';
 	extract($_POST);
 
-	$codsindicato=$codsindicato!=''?" and codsindicato='$codsindicato'":'';
+	//$codsindicato=$codsindicato!=''?" and codsindicato='$codsindicato'":'';
+    
+    $codsindicato=$codsindicato!=''?$codsindicato:'%';
+    $codsindicato="and codsindicato IN(SELECT codsindicato FROM sindicato WHERE activo=1  and codsindicato LIKE '".$codsindicato."')";
 	$codmodalidad=$codmodalidad!=''?" and codmodalidad='$codmodalidad'":'';
 	$codservicio=$codservicio!=''?" and codservicio='$codservicio'":'';
 	
@@ -16,7 +19,7 @@ if (!empty($_POST)) {
 	$modalidad=new modalidad;
 	$servicio=new servicio;
 	$sindicato=new sindicato;
-	$lin=$linea->mostrarTodo("numerolinea LIKE '%$numerolinea%' $codsindicato $codmodalidad $codservicio and paradainicial LIKE '%$paradainicial%' and paradafinal LIKE '%$paradafinal%' and trayectoida LIKE '%$trayectoida%' and trayectovuelta LIKE '%$trayectovuelta%'","numerolinea");
+	$lin=$linea->mostrarTodo("numerolinea LIKE '%$numerolinea%' $codsindicato $codmodalidad $codservicio and paradainicial LIKE '%$paradainicial%' and paradafinal LIKE '%$paradafinal%' and trayectoida LIKE '%$trayectoida%' and trayectovuelta LIKE '%$trayectovuelta%' ","numerolinea");
 	
 	foreach($lin as $l){$i++;
 		$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
@@ -33,7 +36,7 @@ if (!empty($_POST)) {
 		$datos[$i]['codsindicato']=$sin['nombre'];
 		$datos[$i]['codservicio']=$ser['nombre'];
 	}
-	$titulo=array("numerolinea"=>"Número de Linea","color"=>"Color","paradainicial"=>"Parada Inicial","paradafinal"=>"Parada Final","longitudtramo"=>"Longitud Tramo","numeropasajeros"=>"Número de Pasajeros","codmodalidad"=>"Modalidad","codservicio"=>"Servicio","codsindicato"=>"Sindicato");
+	$titulo=array("numerolinea"=>"Número de Línea","color"=>"Color","paradainicial"=>"Parada Inicial","paradafinal"=>"Parada Final","longitudtramo"=>"Longitud Tramo","numeropasajeros"=>"Número de Pasajeros","codmodalidad"=>"Modalidad","codservicio"=>"Servicio","codsindicato"=>"Sindicato");
 	
 	
 	

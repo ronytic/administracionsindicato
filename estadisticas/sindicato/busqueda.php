@@ -28,21 +28,27 @@ $totallineas=count($lin);
 
 $porcentajes=array();
 
-foreach($sindicato->mostrarTodo("estadistica=1 and YEAR(fecha) LIKE '$anio'") as $ser){
+foreach($sindicato->mostrarTodo("estadistica=1 ") as $ser){
 	
 	//$condicion=$where!=''?$where.' and codsindicato='.$ser['codsindicato']:'codservicio='.$ser['codservicio'];
-	$condicion="codsindicato=".$ser['codsindicato'];
+	$condicion="codsindicato=".$ser['codsindicato']." and YEAR(fecha) LIKE '$anio'";
 	$cantlineas=$linea->mostrarTodo($condicion);
-	
+	if($ser['codsindicato']==58){
+        //echo count($cantlineas);
+    }
+    //echo $totallineas;
+    //echo "-".porcentaje($totallineas,count($cantlineas))."-";
 	/*$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
 	if($mod['estadistica']==0){
 		continue;
 	}
 	$i++;*/
-	$porcentajes[$ser['nombre']]=porcentaje($totallineas,count($cantlineas));
+    
+	$porcentajes[$ser['nombre']]=number_format(porcentaje($totallineas,count($cantlineas)),2,".",",");
 }
-
-//print_r($porcentajes);
+/*echo "<pre>";
+print_r($porcentajes);
+echo "</spre>";*/
 
 /*	$mod=array_shift($modalidad->mostrar($l['codmodalidad']));
 	$sin=array_shift($sindicato->mostrar($l['codsindicato']));

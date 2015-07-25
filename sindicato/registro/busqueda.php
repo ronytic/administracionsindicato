@@ -13,6 +13,10 @@ if (!empty($_POST)) {
 	$modi="modificar.php";
 	$eli="eliminar.php";
 	
+    
+    // Le quitas Comentario Le Bloqueas
+    // Lo comentas le habilitas
+    //echo $nivel;
 	switch($nivel){
 		case 1:{//$modi="";//SuperAdmin
 				//$eli="";

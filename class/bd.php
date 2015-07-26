@@ -32,15 +32,15 @@ class bd{
 	function __destruct(){
 		@mysql_close($this->l);
 	}
-	function getTables(){
+	function getTables(){// Obtención de Tablas
 		global $database;
 		return $this->sql("SHOW TABLES FROM ".$database);	
 	}
-	function get_db(){
+	function get_db(){//Guardar Tabla
 		global $database;
 		return $database;	
 	}
-	function sql($consulta){
+	function sql($consulta){//COnsulta sql a la base de datos
 		//echo mysql_real_escape_string ($consulta);
 		$consQ =mysql_query (($consulta));
 		$resultado =array ();
@@ -51,19 +51,19 @@ class bd{
 		}
 		return $resultado;
 	}
-	function queryE($data,$f){
+	function queryE($data,$f){//Verificación de Consulta de Bloqueo
 		//echo $data;
 		if($f=="lock" && md5("lock")==md5($f))
 		{	
 			mysql_query($data); //or die(mysql_error($this->l));
 		}
 	}
-	function statusTable(){
+	function statusTable(){//Estado de la tabla para ver as llaves primarias
 		$query ="SHOW TABLE STATUS LIKE '$this->tabla'";
 		$res=mysql_query($query);
 		return mysql_fetch_array($res);
 	}
-	function getRecords($where_str=false, $order_str=false,$group_str=false, $count=false, $start=0, $order_strDesc=false){
+	function getRecords($where_str=false, $order_str=false,$group_str=false, $count=false, $start=0, $order_strDesc=false){//Obtener los registros
 		$where =$where_str ? "WHERE $where_str" : "";
 		$order =$order_str ? "ORDER BY $order_str ASC" : "";
 		$order =$order_strDesc ? "ORDER BY $order_str DESC" : $order;
@@ -74,11 +74,11 @@ class bd{
 		//echo $query."<br>";
 		return $this->sql ($query);
 	}
-	function last_id(){
+	function last_id(){//Obtener el ultimo registro insertado
 		return mysql_insert_id($this->l);	
 	} 
 	
-	public function insertRow ($data,$sw=1,$swadicional=1){
+	public function insertRow ($data,$sw=1,$swadicional=1){//Funcion pra insertar datos
 		$key=array();
 		$val=array();	
 		foreach($data as $k => $v){
@@ -109,12 +109,12 @@ class bd{
 		//echo $query."<br>";
 		return mysql_query($query);
 	}
-	function deleteRecord($where_str){
+	function deleteRecord($where_str){//Eliminar Registro
 		$where =$where_str ? "WHERE $where_str" : "";
 		mysql_query ("DELETE FROM {$this->tabla} $where");
 //		return $this->validateOperation ();
 	}
-	function updateRow($dataValues,$where_str){
+	function updateRow($dataValues,$where_str){//Actualizar... Registro
 		$where =$where_str ? "WHERE $where_str" : "";
 		$data=array();
 		foreach($dataValues as $k =>$v){
